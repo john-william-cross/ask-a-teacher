@@ -13,14 +13,13 @@ input[type="text"] {
 }
 
 .catch-phrase,
-h2,
 .email-explanation {
    font-family: "Caveat", cursive;
    font-size: 32px;
    word-spacing: 2px;
 }
 
-@media (min-width: 359px) {
+@media (min-width: 359px) and (max-width: 540px) {
    h1 {
       font-size: $font-size-base * 2.5;
    }
