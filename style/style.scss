@@ -8,6 +8,27 @@
    font-family: "Playfair Display", serif;
 }
 
+.catch-phrase {
+   font-family: "Caveat", cursive;
+   font-size: 32px;
+   word-spacing: 2px;
+}
+
 input[type="text"] {
    font-size: 40px;
+}
+
+@media (min-width: 360px) and (max-width: 768px) {
+   h1 {
+      font-size: $font-size-base * 2.5;
+   }
+
+   img {
+      width: 35px;
+      margin-top: 20px;
+   }
+
+   .catch-phrase {
+      font-size: $font-size-base * 1.25;
+   }
 }
