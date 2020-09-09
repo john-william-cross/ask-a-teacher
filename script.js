@@ -5,6 +5,6 @@ $(".form-control").on("input", function () {
    $(".ask-new-question").toggleClass("d-none");
 });
 
-$(".submit-question-button").onclick(function () {
-   $;
+$(".answer-a-question").click(function () {
+   $(".sign-up-sign-in").toggleClass("d-flex d-none");
 });
