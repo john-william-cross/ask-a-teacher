@@ -18,7 +18,7 @@ input[type="text"] {
    font-size: 40px;
 }
 
-@media (max-width: 359px) {
+@media (min-width: 359px) {
    h1 {
       font-size: $font-size-base * 2.5;
    }
@@ -30,6 +30,10 @@ input[type="text"] {
 
    .catch-phrase {
       font-size: $font-size-base * 1.25;
+   }
+
+   input[type="text"] {
+      font-size: 16px;
    }
 }
 

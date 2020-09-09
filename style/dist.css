@@ -159,7 +159,7 @@ a {
 }
 a:hover {
   color: #2f2f36;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:not([href]):not([class]) {
@@ -2862,10 +2862,10 @@ fieldset:disabled a.btn {
 }
 .btn-link:hover {
   color: #2f2f36;
-  text-decoration: underline;
+  text-decoration: none;
 }
 .btn-link:focus, .btn-link.focus {
-  text-decoration: underline;
+  text-decoration: none;
 }
 .btn-link:disabled, .btn-link.disabled {
   color: #6c757d;
@@ -11365,7 +11365,7 @@ input[type=text] {
   font-size: 40px;
 }
 
-@media (max-width: 359px) {
+@media (min-width: 359px) {
   h1 {
     font-size: 2.5rem;
   }
@@ -11377,6 +11377,10 @@ input[type=text] {
 
   .catch-phrase {
     font-size: 1.25rem;
+  }
+
+  input[type=text] {
+    font-size: 16px;
   }
 }
 @media (max-width: 575px) {
