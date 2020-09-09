@@ -18,7 +18,7 @@ input[type="text"] {
    font-size: 40px;
 }
 
-@media (min-width: 360px) and (max-width: 768px) {
+@media (max-width: 359px) {
    h1 {
       font-size: $font-size-base * 2.5;
    }
@@ -30,5 +30,11 @@ input[type="text"] {
 
    .catch-phrase {
       font-size: $font-size-base * 1.25;
+   }
+}
+
+@media (max-width: 575px) {
+   .sort-prompt {
+      text-align: left !important;
    }
 }

@@ -11365,7 +11365,7 @@ input[type=text] {
   font-size: 40px;
 }
 
-@media (min-width: 360px) and (max-width: 768px) {
+@media (max-width: 359px) {
   h1 {
     font-size: 2.5rem;
   }
@@ -11377,6 +11377,11 @@ input[type=text] {
 
   .catch-phrase {
     font-size: 1.25rem;
+  }
+}
+@media (max-width: 575px) {
+  .sort-prompt {
+    text-align: left !important;
   }
 }
 
