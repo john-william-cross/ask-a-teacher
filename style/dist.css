@@ -11355,14 +11355,14 @@ h3 {
   font-family: "Playfair Display", serif;
 }
 
+input[type=text] {
+  font-size: 16px;
+}
+
 .catch-phrase {
   font-family: "Caveat", cursive;
   font-size: 32px;
   word-spacing: 2px;
-}
-
-input[type=text] {
-  font-size: 40px;
 }
 
 @media (min-width: 359px) {
@@ -11377,10 +11377,6 @@ input[type=text] {
 
   .catch-phrase {
     font-size: 1.25rem;
-  }
-
-  input[type=text] {
-    font-size: 16px;
   }
 }
 @media (max-width: 575px) {
