@@ -11359,7 +11359,9 @@ input[type=text] {
   font-size: 16px;
 }
 
-.catch-phrase {
+.catch-phrase,
+h2,
+.email-explanation {
   font-family: "Caveat", cursive;
   font-size: 32px;
   word-spacing: 2px;
