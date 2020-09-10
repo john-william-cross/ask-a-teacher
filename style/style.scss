@@ -19,6 +19,21 @@ input[type="text"] {
    word-spacing: 2px;
 }
 
+.answer-a-question {
+   background-image: url(/images/chakboard.png);
+   background-repeat: repeat-x;
+   background-size: contain;
+   height: 150px;
+}
+
+.answer-a-question {
+   font-weight: 100;
+}
+
+.answer-question-link:hover {
+   cursor: pointer;
+}
+
 @media (min-width: 359px) and (max-width: 540px) {
    h1 {
       font-size: $font-size-base * 2.5;

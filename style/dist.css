@@ -159,7 +159,7 @@ a {
 }
 a:hover {
   color: #2f2f36;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:not([href]):not([class]) {
@@ -2862,10 +2862,10 @@ fieldset:disabled a.btn {
 }
 .btn-link:hover {
   color: #2f2f36;
-  text-decoration: none;
+  text-decoration: underline;
 }
 .btn-link:focus, .btn-link.focus {
-  text-decoration: none;
+  text-decoration: underline;
 }
 .btn-link:disabled, .btn-link.disabled {
   color: #6c757d;
@@ -11364,6 +11364,21 @@ input[type=text] {
   font-family: "Caveat", cursive;
   font-size: 32px;
   word-spacing: 2px;
+}
+
+.answer-a-question {
+  background-image: url(/images/chakboard.png);
+  background-repeat: repeat-x;
+  background-size: contain;
+  height: 150px;
+}
+
+.answer-a-question {
+  font-weight: 100;
+}
+
+.answer-question-link:hover {
+  cursor: pointer;
 }
 
 @media (min-width: 359px) and (max-width: 540px) {
