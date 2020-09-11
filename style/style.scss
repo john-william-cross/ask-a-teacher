@@ -54,7 +54,9 @@
    font-weight: 100;
 }
 
-.question {
+.question,
+.sign-in,
+.sign-up {
    font-size: 24px;
 }
 
@@ -64,9 +66,12 @@ input[type="text"] {
 
 .submit-question-button,
 .submit-answer-button {
-   border-radius: 15px;
-   font-size: 20px;
+   border: none;
 }
+
+// .submit-answer-button:hover .submit-question-button:hover {
+//    border: none;
+// }
 
 img {
    @include media-breakpoint-only(xs) {
