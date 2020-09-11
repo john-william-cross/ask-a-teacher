@@ -4,8 +4,62 @@
 //     text-align: justify;
 // }
 
-.logo {
+.logo-text {
    font-family: "Playfair Display", serif;
+   @include media-breakpoint-only(xs) {
+      font-size: $font-size-base * 2;
+      margin-bottom: -10px;
+   }
+   @include media-breakpoint-only(sm) {
+      font-size: $font-size-base * 1.5;
+   }
+   @include media-breakpoint-only(md) {
+      font-size: $font-size-base * 2.5;
+   }
+   @include media-breakpoint-only(lg) {
+      font-size: $font-size-base * 3;
+   }
+   @include media-breakpoint-only(xl) {
+      font-size: $font-size-base * 3.5;
+   }
+}
+
+.answer-question-link {
+   @include media-breakpoint-only(xs) {
+      font-size: $font-size-base;
+   }
+   @include media-breakpoint-only(sm) {
+      font-size: $font-size-base * 0.75;
+   }
+   @include media-breakpoint-only(md) {
+      font-size: $font-size-base * 2.5;
+   }
+   @include media-breakpoint-only(lg) {
+      font-size: $font-size-base * 3;
+   }
+   @include media-breakpoint-only(xl) {
+      font-size: $font-size-base * 3.5;
+   }
+}
+
+img {
+   @include media-breakpoint-only(xs) {
+      width: 25px;
+      margin-top: 0px;
+      margin-bottom: 20px;
+   }
+   @include media-breakpoint-only(sm) {
+   }
+   @include media-breakpoint-only(md) {
+   }
+   @include media-breakpoint-only(lg) {
+   }
+   @include media-breakpoint-only(xl) {
+   }
+}
+
+.answer-question-link:hover {
+   cursor: pointer;
 }
 
 input[type="text"] {
@@ -19,38 +73,31 @@ input[type="text"] {
    word-spacing: 2px;
 }
 
-.answer-a-question {
-   background-image: url(/images/chakboard.png);
-   background-repeat: repeat-x;
-   background-size: contain;
-   height: 150px;
+.header-solid {
+   background-color: $gray-700;
 }
 
 .answer-a-question {
    font-weight: 100;
 }
 
-.answer-question-link:hover {
-   cursor: pointer;
-}
+// @media (min-width: 359px) and (max-width: 540px) {
+//    h1 {
+//       font-size: $font-size-base * 2.5;
+//    }
 
-@media (min-width: 359px) and (max-width: 540px) {
-   h1 {
-      font-size: $font-size-base * 2.5;
-   }
+//    img {
+//       width: 35px;
+//       margin-top: 20px;
+//    }
 
-   img {
-      width: 35px;
-      margin-top: 20px;
-   }
+//    .catch-phrase {
+//       font-size: $font-size-base * 1.25;
+//    }
+// }
 
-   .catch-phrase {
-      font-size: $font-size-base * 1.25;
-   }
-}
-
-@media (max-width: 575px) {
-   .sort-prompt {
-      text-align: left !important;
-   }
-}
+// @media (max-width: 575px) {
+//    .sort-prompt {
+//       text-align: left !important;
+//    }
+// }
