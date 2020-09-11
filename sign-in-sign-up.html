@@ -14,97 +14,101 @@
       <link rel="stylesheet" href="style/dist.css" />
       <title>Ask a Teacher</title>
    </head>
-   <body>  <div class="header-solid fixed-top pt-4 pb-0">
-      <div class="container">
-         <a
-            href="questions.html"
-            class="float-right answer-question-link"
-            style="color: white; font-weight: 100; text-decoration: underline;"
-         >
-            Answer a question
-         </a>
-         <a href="index.html"
-         ><img src="icons/white-logo.svg" />
-         <h1 class="d-inline logo-text ml-3" style="color: white" ;>
-            Ask a Teacher
-         </h1></a
-      >
+   <body>
+      <div class="header-solid fixed-top pt-4 pb-0">
+         <div class="container">
+            <a
+               href="sign-in-sign-up.html"
+               class="float-right answer-question-link"
+               style="border-radius: 20px; color: white; font-weight: 100"
+            >
+               Answer a question
+            </a>
+            <a href="index.html"
+               ><img src="icons/white-logo.svg" />
+               <p class="d-inline logo-text ml-2" style="color: white" ;>
+                  Ask a Teacher
+               </p></a
+            >
+         </div>
       </div>
-   </div>
       <div class="container">
-         <div class="row no-gutters">
-        
+         <div class="row mx-auto">
+            <div class="col-12 col-md-6 mb-8">
+               <div class="card">
+                  <div class="card-body mt-9">
+                    
+                        <div class="show-sign-up-info mt-9">
+                           <h2>Nice to meet you</h2>
+                           <p class="mt-2 mb-2">
+                              Sign up for White Bear. Free forever.
+                           </p>
 
-            <div class="col-12 mt-4 search-results" style="display: none">
-               <p class="ml-1">What is the area model of multiplication?</p>
-            </div>
-            <div class="col-12 mt-4 search-results" style="display: none">
-               <p class="ml-1">
-                  I don’t know anything about common core my child is having
-                  trouble with multiplying and I don’t know how he’s supposed to
-                  do it he says I’m not showing him the right way please help
-               </p>
+                           <a
+                              class="sign-up-prompt btn btn-block btn-success btn-sm mt-4"
+                           >
+                              Sign up
+                           </a>
+                        </div>
+                        <div class="email-and-create-password d-none mt-9">
+                           <h2 >Nice to meet you</h2>
+                           <p class="mt-2 mb-2">
+                              Sign up for White Bear. Free forever.
+                           </p>
+                           <p class=" mt-1 mb-3">
+                              Let's get you signed up.
+                           </p>
+                           <p class="lead text-muted mt-2">Email address</p>
+                           <input
+                              class="form-control form-control-sm"
+                              type="text"
+                           />
+                           <p class="lead text-muted mt-2">Create a password</p>
+                           <input
+                              class="form-control form-control-sm"
+                              type="text"
+                           />
+                           <a
+                              href="index.html"
+                              class="btn btn-block btn-success btn-lg mt-4"
+                              id="sign-up-button"
+                           >
+                              Let's go!
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
 
-            <div class="col-12 mt-4 search-results" style="display: none">
-               <p class="ml-1">What is the meaning of life?</p>
+            <div class="col-12 col-md-6">
+               <div class="card ml-md-8">
+                  <div class="card-body text-dark font-sans-serif">
+                     <h2>Welcome Back</h2>
+                     <p>Log in with your email address and password.</p>
+                     <p class="lead text-muted mt-2">Email address</p>
+                     <input
+                        class="form-control form-control-sm"
+                        type="text"
+                        placeholder=""
+                     />
+                     <p class="lead text-muted mt-2">Password</p>
+                     <input
+                        class="form-control form-control-sm"
+                        type="text"
+                        placeholder=""
+                     />
+
+                     <a
+                        href="index.html"
+                        class="float-right btn btn-success btn-sm mt-2"
+                     >
+                        Log in
+                     </a>
+                  </div>
+               </div>
             </div>
          </div>
-
-         <div class="row mt-9">
-            <div class="col-6">
-               <input
-                  type="text"
-                  class="form-control mt-4"
-                  placeholder="Enter your school email"
-                  aria-label="enter your school email"
-                  aria-describedby="enter school email"
-               />
-               <input
-                  type="text"
-                  class="form-control mt-4"
-                  placeholder="Enter your password"
-                  aria-label="entera password"
-                  aria-describedby="enter password"
-               />
-               <a
-                  href="questions.html"
-                  class="btn btn-block btn-outline-primary btn-sm mt-4"
-                  id="sign-up-button"
-               >
-                  Sign in
-               </a>
-            </div>
-            <div class="col-6">
-                <input
-                   type="text"
-                   class="form-control mt-4"
-                   placeholder="Enter your school email"
-                   aria-label="enter your school email"
-                   aria-describedby="enter school email"
-                />
-                <input
-                   type="text"
-                   class="form-control mt-4"
-                   placeholder="Enter your password"
-                   aria-label="entera password"
-                   aria-describedby="enter password"
-                />
-                <a
-                   href="questions.html"
-                   class="btn btn-block btn-outline-primary btn-sm mt-4"
-                   id="sign-up-button"
-                >
-                   Sign up
-                </a>
-             </div>
-         </div>
-         
-         </div>
-       
-     
-       
-        
       </div>
 
       <script

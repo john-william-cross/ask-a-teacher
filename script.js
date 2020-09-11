@@ -12,3 +12,8 @@ $(".answer-a-question").click(function () {
 $(".submit-question-button, .submit-answer-button").click(function () {
    $(".thank-you-message").toggleClass("d-none");
 });
+
+$(".sign-up-prompt").click(function () {
+   $(".show-sign-up-info").toggleClass("d-none");
+   $(".email-and-create-password").toggleClass("d-none");
+});
