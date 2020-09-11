@@ -11402,7 +11402,7 @@ h3 {
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .answer-question-link {
     font-size: 1.5rem;
-    margin-top: 56px;
+    margin-top: 50px;
   }
 }
 @media (min-width: 1200px) {
@@ -11418,8 +11418,17 @@ h3 {
   font-weight: 100;
 }
 
-.submit-question-button {
-  border-radius: 20px;
+.question {
+  font-size: 24px;
+}
+
+input[type=text] {
+  border-radius: 15px;
+}
+
+.submit-question-button,
+.submit-answer-button {
+  border-radius: 15px;
   font-size: 20px;
 }
 

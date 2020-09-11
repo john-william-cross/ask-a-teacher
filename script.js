@@ -9,6 +9,6 @@ $(".answer-a-question").click(function () {
    $(".sign-up-sign-in").toggleClass("d-flex d-none");
 });
 
-$(".submit-question-button").click(function () {
+$(".submit-question-button, .submit-answer-button").click(function () {
    $(".thank-you-message").toggleClass("d-none");
 });

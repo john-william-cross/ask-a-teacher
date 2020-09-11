@@ -35,7 +35,7 @@
    }
    @include media-breakpoint-only(lg) {
       font-size: $font-size-base * 1.5;
-      margin-top: 56px;
+      margin-top: 50px;
    }
    @include media-breakpoint-only(xl) {
       font-size: $font-size-base * 2;
@@ -49,8 +49,17 @@
    font-weight: 100;
 }
 
-.submit-question-button {
-   border-radius: 20px;
+.question {
+   font-size: 24px;
+}
+
+input[type="text"] {
+   border-radius: 15px;
+}
+
+.submit-question-button,
+.submit-answer-button {
+   border-radius: 15px;
    font-size: 20px;
 }
 
@@ -77,9 +86,6 @@ img {
       width: 75px;
       margin-bottom: 70px;
    }
-}
-
-.logo-text {
 }
 
 .answer-question-link:hover {
