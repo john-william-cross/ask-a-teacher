@@ -10,15 +10,25 @@
       <title>Ask a Teacher</title>
    </head>
    <body>
+      <div class="header-solid fixed-top pt-4 pb-0">
+         <div class="container">
+            <a
+               href="answer-a-question.html"
+               class="float-right answer-question-link"
+               style="color: white; font-weight: 100"
+            >
+               Answer a question
+            </a>
+            <img src="icons/white-logo.svg" />
+            <h1 class="d-inline logo-text ml-3" style="color: white">
+               Ask a Teacher
+            </h1>
+         </div>
+      </div>
       <div class="container">
          <div class="row">
             <div class="col-12 mt-5">
                <a href="index.html">
-                  <img
-                     src="icons/caret-left.svg"
-                     style="opacity: 0.7"
-                     width="30px"
-                     ; />
                   <img src="icons/logo.svg" width="35px;" style="opacity: 0.7"
                /></a>
             </div>
@@ -36,7 +46,7 @@
                />
             </div>
 
-            <div class="col-12 mt-4 previously-answered-questions">
+            <div class="col-12 mt-4">
                <input
                   type="text"
                   class="form-control mt-4"
@@ -44,18 +54,16 @@
                   aria-label="enter your email"
                   aria-describedby="enter email"
                />
-               <p class="mb-5 mt-1">
-                  &nbspWe will email you once it's answered.
-               </p>
+            </div>
+            <div class="col-12 mt-6">
                <input
-                  class="btn btn-outline-primary"
+                  class="btn btn-lg btn-outline-primary"
+                  style="display: block; width: 100%"
                   type="submit"
                   value="Submit question"
                />
-               <hr />
             </div>
-
-   
+         </div>
       </div>
 
       <script

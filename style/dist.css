@@ -11383,9 +11383,9 @@ h3 {
 
 @media (max-width: 575.98px) {
   .answer-question-link {
-    font-size: 0.5rem;
+    font-size: 0.75rem;
     margin-right: 35px;
-    margin-top: 23px;
+    margin-top: 20px;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
