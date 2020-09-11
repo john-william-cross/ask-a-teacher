@@ -11384,33 +11384,43 @@ h3 {
 @media (max-width: 575.98px) {
   .answer-question-link {
     font-size: 0.75rem;
-    margin-right: 35px;
-    margin-top: 20px;
+    margin-top: 19px;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
   .answer-question-link {
     font-size: 1rem;
-    margin-top: 30px;
+    margin-top: 32px;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
   .answer-question-link {
-    font-size: 1.5rem;
-    margin-top: 38px;
+    font-size: 1.25rem;
+    margin-top: 43px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .answer-question-link {
-    font-size: 2rem;
-    margin-top: 45px;
+    font-size: 1.5rem;
+    margin-top: 56px;
   }
 }
 @media (min-width: 1200px) {
   .answer-question-link {
-    font-size: 2.5rem;
-    margin-top: 53px;
+    font-size: 2rem;
+    margin-top: 35px;
   }
+}
+
+.answer-question-link {
+  border-radius: 20px;
+  color: white;
+  font-weight: 100;
+}
+
+.submit-question-button {
+  border-radius: 20px;
+  font-size: 20px;
 }
 
 @media (max-width: 575.98px) {
@@ -11451,14 +11461,12 @@ h3 {
 }
 
 input[type=text] {
-  font-size: 16px;
-}
-
-.catch-phrase,
-.email-explanation {
-  font-family: "Caveat", cursive;
   font-size: 32px;
-  word-spacing: 2px;
+}
+@media (max-width: 575.98px) {
+  input[type=text] {
+    font-size: 20px;
+  }
 }
 
 .header-solid {

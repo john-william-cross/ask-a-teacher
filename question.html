@@ -13,55 +13,54 @@
       <div class="header-solid fixed-top pt-4 pb-0">
          <div class="container">
             <a
-               href="answer-a-question.html"
-               class="float-right answer-question-link"
-               style="color: white; font-weight: 100"
+               href="questions.html"
+               class="btn btn-lg btn-outline-primary float-right answer-question-link"
             >
                Answer a question
             </a>
-            <img src="icons/white-logo.svg" />
-            <h1 class="d-inline logo-text ml-3" style="color: white">
-               Ask a Teacher
-            </h1>
+            <a href="index.html"
+               ><img src="icons/white-logo.svg" />
+               <h1 class="d-inline logo-text ml-3" style="color: white">
+                  Ask a Teacher
+               </h1></a
+            >
          </div>
       </div>
+      <div class="mb-9"></div>
       <div class="container">
-         <div class="row">
-            <div class="col-12 mt-5">
-               <a href="index.html">
-                  <img src="icons/logo.svg" width="35px;" style="opacity: 0.7"
-               /></a>
-            </div>
-            <hr />
-         </div>
-
-         <div class="row">
-            <div class="col-12 mt-4 previously-answered-questions">
+         <div class="row mt-9">
+            <div class="col-12 mt-9 previously-answered-questions">
+               <p style="font-size: 36px" class="mb-n3">Ask a new question</p>
                <input
                   type="text"
+                  autofocus
+                  style="border-radius: 20px"
                   class="form-control mt-4"
-                  placeholder="Ask a new question"
                   aria-label="ask a new question"
                   aria-describedby="ask new question"
                />
             </div>
 
             <div class="col-12 mt-4">
+               <p style="font-size: 36px">Enter your email</p>
                <input
                   type="text"
+                  style="border-radius: 20px"
                   class="form-control mt-4"
-                  placeholder="Enter your email"
                   aria-label="enter your email"
                   aria-describedby="enter email"
                />
             </div>
-            <div class="col-12 mt-6">
+
+            <div class="col-12 mt-8">
                <input
-                  class="btn btn-lg btn-outline-primary"
-                  style="display: block; width: 100%"
+                  class="submit-question-button btn btn-lg btn-outline-primary"
                   type="submit"
                   value="Submit question"
                />
+               <p class="thank-you-message mt-4 d-none" style="font-size: 24px">
+                  Thanks for your question! We'll notify you once it's answered.
+               </p>
             </div>
          </div>
       </div>

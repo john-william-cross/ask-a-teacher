@@ -1,9 +1,5 @@
 //this is for things that aren't bootstrap variables
 
-// p {
-//     text-align: justify;
-// }
-
 .logo-text {
    font-family: "Playfair Display", serif;
    @include media-breakpoint-only(xs) {
@@ -27,25 +23,35 @@
 .answer-question-link {
    @include media-breakpoint-only(xs) {
       font-size: $font-size-base * 0.75;
-      margin-right: 35px;
-      margin-top: 20px;
+      margin-top: 19px;
    }
    @include media-breakpoint-only(sm) {
-      font-size: $font-size-base;
-      margin-top: 30px;
+      font-size: $font-size-base * 1;
+      margin-top: 32px;
    }
    @include media-breakpoint-only(md) {
-      font-size: $font-size-base * 1.5;
-      margin-top: 38px;
+      font-size: $font-size-base * 1.25;
+      margin-top: 43px;
    }
    @include media-breakpoint-only(lg) {
-      font-size: $font-size-base * 2;
-      margin-top: 45px;
+      font-size: $font-size-base * 1.5;
+      margin-top: 56px;
    }
    @include media-breakpoint-only(xl) {
-      font-size: $font-size-base * 2.5;
-      margin-top: 53px;
+      font-size: $font-size-base * 2;
+      margin-top: 35px;
    }
+}
+
+.answer-question-link {
+   border-radius: 20px;
+   color: white;
+   font-weight: 100;
+}
+
+.submit-question-button {
+   border-radius: 20px;
+   font-size: 20px;
 }
 
 img {
@@ -73,19 +79,18 @@ img {
    }
 }
 
+.logo-text {
+}
+
 .answer-question-link:hover {
    cursor: pointer;
 }
 
 input[type="text"] {
-   font-size: 16px;
-}
-
-.catch-phrase,
-.email-explanation {
-   font-family: "Caveat", cursive;
+   @include media-breakpoint-only(xs) {
+      font-size: 20px;
+   }
    font-size: 32px;
-   word-spacing: 2px;
 }
 
 .header-solid {
@@ -95,24 +100,3 @@ input[type="text"] {
 .answer-a-question {
    font-weight: 100;
 }
-
-// @media (min-width: 359px) and (max-width: 540px) {
-//    h1 {
-//       font-size: $font-size-base * 2.5;
-//    }
-
-//    img {
-//       width: 35px;
-//       margin-top: 20px;
-//    }
-
-//    .catch-phrase {
-//       font-size: $font-size-base * 1.25;
-//    }
-// }
-
-// @media (max-width: 575px) {
-//    .sort-prompt {
-//       text-align: left !important;
-//    }
-// }
