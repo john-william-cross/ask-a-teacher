@@ -41,19 +41,19 @@ a {
    }
    @include media-breakpoint-only(sm) {
       font-size: $font-size-base * 1;
-      margin-top: 21px;
+      margin-top: 25px;
    }
    @include media-breakpoint-only(md) {
       font-size: $font-size-base * 1.25;
-      margin-top: 30px;
+      margin-top: 50px;
    }
    @include media-breakpoint-only(lg) {
       font-size: $font-size-base * 1.5;
-      margin-top: 70px;
+      margin-top: 68px;
    }
    @include media-breakpoint-only(xl) {
       font-size: $font-size-base * 2;
-      margin-top: 75px;
+      margin-top: 90px;
    }
 }
 
