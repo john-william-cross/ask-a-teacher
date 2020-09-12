@@ -11351,6 +11351,14 @@ h3 {
     border-color: #dee2e6;
   }
 }
+a {
+  font-weight: 700;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .logo-text {
   font-family: "Playfair Display", serif;
 }
@@ -11420,13 +11428,17 @@ h3 {
 .answer-question-link {
   border-radius: 20px;
   color: white;
-  font-weight: 100;
+  font-weight: 700;
 }
 
+.form-control,
+p,
 .question,
 .sign-in,
-.sign-up {
-  font-size: 24px;
+.sign-up,
+.submit-question-button,
+.submit-answer-button {
+  font-size: 32px;
 }
 
 input[type=text] {
@@ -11471,9 +11483,6 @@ input[type=text] {
   }
 }
 
-input[type=text] {
-  font-size: 32px;
-}
 @media (max-width: 575.98px) {
   input[type=text] {
     font-size: 20px;
@@ -11489,8 +11498,6 @@ input[type=text] {
 }
 
 a:hover {
-  font-weight: 700 !important;
-  text-decoration: none !important;
   cursor: pointer;
 }
 

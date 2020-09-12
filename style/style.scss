@@ -1,5 +1,13 @@
 //this is for things that aren't bootstrap variables
 
+a {
+   font-weight: $font-weight-bold;
+}
+
+a:hover {
+   text-decoration: underline;
+}
+
 .logo-text {
    font-family: "Playfair Display", serif;
    @include media-breakpoint-only(xs) {
@@ -51,13 +59,17 @@
 .answer-question-link {
    border-radius: 20px;
    color: white;
-   font-weight: 100;
+   font-weight: $font-weight-bold;
 }
 
+.form-control,
+p,
 .question,
 .sign-in,
-.sign-up {
-   font-size: 24px;
+.sign-up,
+.submit-question-button,
+.submit-answer-button {
+   font-size: 32px;
 }
 
 input[type="text"] {
@@ -102,7 +114,6 @@ input[type="text"] {
    @include media-breakpoint-only(xs) {
       font-size: 20px;
    }
-   font-size: 32px;
 }
 
 .header-solid {
@@ -114,7 +125,5 @@ input[type="text"] {
 }
 
 a:hover {
-   font-weight: $font-weight-bold !important;
-   text-decoration: none !important;
    cursor: pointer;
 }

@@ -15,7 +15,7 @@
             <a
                href="sign-in-sign-up.html"
                class="float-right answer-question-link"
-               style="border-radius: 20px; color: white; font-weight: 100"
+               style="color: white"
             >
                Answer a question
             </a>
@@ -31,18 +31,17 @@
       <div class="container">
          <div class="row mt-9">
             <div class="col-12 mt-9 previously-answered-questions">
-               <p style="font-size: 36px" class="mb-n3">Ask a new question</p>
-               <input
-                  type="text"
+               <p class="mb-3">Ask a new question</p>
+               <textarea
+                  class="form-control"
+                  rows="6"
                   autofocus
-                  class="form-control mt-4"
-                  aria-label="ask a new question"
-                  aria-describedby="ask new question"
-               />
+                  style="width: 100%"
+               ></textarea>
             </div>
 
             <div class="col-12 mt-4">
-               <p style="font-size: 36px">Enter your email</p>
+               <p>Enter your email</p>
                <input
                   type="text"
                   class="form-control mt-4"
@@ -51,13 +50,13 @@
                />
             </div>
 
-            <div class="col-12 mt-8">
+            <div class="col-12 mt-8 text-center">
                <input
                   class="submit-question-button btn btn-lg btn-outline-primary"
                   type="submit"
                   value="Submit question"
                />
-               <p class="thank-you-message mt-4 d-none" style="font-size: 24px">
+               <p class="thank-you-message mt-4 d-none">
                   Thanks for your question! We'll notify you once it's answered.
                </p>
             </div>

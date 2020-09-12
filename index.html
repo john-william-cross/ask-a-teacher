@@ -20,9 +20,9 @@
             <a
                href="sign-in-sign-up.html"
                class="float-right answer-question-link"
-               style="border-radius: 20px; color: white; font-weight: 100"
+               style="color: white"
             >
-               Answer a question
+               <p>Answer a question</p>
             </a>
             <a href="index.html"
                ><img src="icons/white-logo.svg" />
@@ -36,39 +36,32 @@
       <div class="container">
          <div class="row no-gutters">
             <div class="col-12 mt-9">
-               <p style="font-size: 36px">Ask a question</p>
-               <input
-                  type="text"
+               <p>Ask a question</p>
+               <textarea
+                  class="form-control"
+                  rows="11"
                   autofocus
-                  style="border-radius: 20px"
-                  class="form-control form-control-lg mt-4 autof"
-                  aria-label="Ask a question"
-                  aria-describedby="search box"
-               />
-            </div>
-            <div class="col-12 mt-6">
-               <a
-                  href="/question.html"
-                  style="border-radius: 20px"
-                  class="btn btn-outline-primary btn-lg submit-question-button"
-               >
-                  Ask a new question
-               </a>
-            </div>
+                  style="width: 100%"
+               ></textarea>
 
-            <div class="col-12 mt-4 search-results;">
-               <p class="ml-1">What is the area model of multiplication?</p>
-            </div>
-            <div class="col-12 mt-4 search-results" style="display: none">
-               <p class="ml-1">
-                  I don’t know anything about common core my child is having
-                  trouble with multiplying and I don’t know how he’s supposed to
-                  do it he says I’m not showing him the right way please help
-               </p>
-            </div>
+               <a href="/question.html"> <p>Ask a new question</p></a>
 
-            <div class="col-12 mt-4 search-results" style="display: none">
-               <p class="ml-1">What is the meaning of life?</p>
+               <div class="search-results" style="display: none">
+                  <p class="ml-1">
+                     I don’t know anything about common core my child is having
+                     trouble with multiplying and I don’t know how he’s supposed
+                     to do it he says I’m not showing him the right way please
+                     help
+                  </p>
+               </div>
+
+               <div class="search-results" style="display: none">
+                  <p class="ml-1">What is the meaning of life?</p>
+               </div>
+
+               <div class="mt-4 search-results;" style="display: none">
+                  <p class="ml-1">What is the area model of multiplication?</p>
+               </div>
             </div>
          </div>
       </div>
