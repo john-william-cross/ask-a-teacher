@@ -1,18 +1,20 @@
 //this is for things that aren't bootstrap variables
 
+$link-hover-decoration: underline !default;
+
 a {
    font-weight: $font-weight-bold;
 }
 
-a:hover {
-   text-decoration: underline;
+.logo-text:hover {
+   $link-hover-decoration: none !important;
 }
-
 .logo-text {
    font-family: "Playfair Display", serif;
    @include media-breakpoint-only(xs) {
       font-size: $font-size-base * 2;
       margin-bottom: -10px;
+      text-decoration: none;
    }
    @include media-breakpoint-only(sm) {
       font-size: $font-size-base * 3;
@@ -36,28 +38,26 @@ a:hover {
 .answer-question-link {
    @include media-breakpoint-only(xs) {
       font-size: $font-size-base * 0.75;
-      margin-top: 19px;
    }
    @include media-breakpoint-only(sm) {
       font-size: $font-size-base * 1;
-      margin-top: 32px;
+      margin-top: 21px;
    }
    @include media-breakpoint-only(md) {
       font-size: $font-size-base * 1.25;
-      margin-top: 43px;
+      margin-top: 30px;
    }
    @include media-breakpoint-only(lg) {
       font-size: $font-size-base * 1.5;
-      margin-top: 50px;
+      margin-top: 70px;
    }
    @include media-breakpoint-only(xl) {
       font-size: $font-size-base * 2;
-      margin-top: 35px;
+      margin-top: 75px;
    }
 }
 
 .answer-question-link {
-   border-radius: 20px;
    color: white;
    font-weight: $font-weight-bold;
 }
@@ -80,10 +80,6 @@ input[type="text"] {
 .submit-answer-button {
    border: none;
 }
-
-// .submit-answer-button:hover .submit-question-button:hover {
-//    border: none;
-// }
 
 img {
    @include media-breakpoint-only(xs) {
@@ -118,10 +114,6 @@ input[type="text"] {
 
 .header-solid {
    background-color: $gray-900;
-}
-
-.answer-a-question {
-   font-weight: 100;
 }
 
 a:hover {

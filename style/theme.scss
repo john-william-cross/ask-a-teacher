@@ -156,7 +156,7 @@ $h4-font-size: $font-size-base * 1.25;
 
 $text-muted: $gray-400;
 
-$lead-font-size: $font-size-base * 1.25;
+$lead-font-size: $font-size-base * 2;
 $lead-font-weight: $font-weight-normal;
 
 // LINKS
@@ -164,6 +164,8 @@ $lead-font-weight: $font-weight-normal;
 $link-color: theme-color("primary");
 $link-decoration: none;
 $link-hover-color: darken($link-color, 15%);
+$link-hover-decoration: none !default;
+
 // $link-hover-decoration: underline;
 // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
 $emphasized-link-hover-darken-percentage: 15%;

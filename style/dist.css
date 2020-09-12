@@ -383,7 +383,7 @@ h6, .h6 {
 }
 
 .lead {
-  font-size: 1.25rem;
+  font-size: 2rem;
   font-weight: 400;
 }
 
@@ -11355,10 +11355,6 @@ a {
   font-weight: 700;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
 .logo-text {
   font-family: "Playfair Display", serif;
 }
@@ -11366,6 +11362,7 @@ a:hover {
   .logo-text {
     font-size: 2rem;
     margin-bottom: -10px;
+    text-decoration: none;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -11397,36 +11394,34 @@ a:hover {
 @media (max-width: 575.98px) {
   .answer-question-link {
     font-size: 0.75rem;
-    margin-top: 19px;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
   .answer-question-link {
     font-size: 1rem;
-    margin-top: 32px;
+    margin-top: 21px;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
   .answer-question-link {
     font-size: 1.25rem;
-    margin-top: 43px;
+    margin-top: 30px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .answer-question-link {
     font-size: 1.5rem;
-    margin-top: 50px;
+    margin-top: 70px;
   }
 }
 @media (min-width: 1200px) {
   .answer-question-link {
     font-size: 2rem;
-    margin-top: 35px;
+    margin-top: 75px;
   }
 }
 
 .answer-question-link {
-  border-radius: 20px;
   color: white;
   font-weight: 700;
 }
@@ -11491,10 +11486,6 @@ input[type=text] {
 
 .header-solid {
   background-color: #141518;
-}
-
-.answer-a-question {
-  font-weight: 100;
 }
 
 a:hover {
