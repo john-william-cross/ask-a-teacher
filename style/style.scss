@@ -66,6 +66,10 @@ p,
    font-size: 24px;
 }
 
+.question {
+   margin-top: 20px;
+}
+
 img {
    @include media-breakpoint-only(xs) {
       width: 30px;

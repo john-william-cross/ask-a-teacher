@@ -11430,6 +11430,10 @@ p,
   font-size: 24px;
 }
 
+.question {
+  margin-top: 20px;
+}
+
 @media (max-width: 575.98px) {
   img {
     width: 30px;
