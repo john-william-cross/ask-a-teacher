@@ -11,49 +11,40 @@ a {
 }
 .logo-text {
    font-family: "Playfair Display", serif;
-   @include media-breakpoint-only(xs) {
-      font-size: $font-size-base * 2;
-      margin-bottom: -10px;
-      text-decoration: none;
-   }
+
    @include media-breakpoint-only(sm) {
-      font-size: $font-size-base * 3;
-      line-height: 0;
-      padding-bottom: 10px;
-      word-spacing: 6;
+      font-size: $font-size-base * 2.25;
    }
    @include media-breakpoint-only(md) {
-      font-size: $font-size-base * 4;
-      line-height: 0;
-      word-spacing: 7;
+      font-size: $font-size-base * 2.5;
    }
    @include media-breakpoint-only(lg) {
-      font-size: $font-size-base * 5;
+      font-size: $font-size-base * 3;
    }
    @include media-breakpoint-only(xl) {
-      font-size: $font-size-base * 6;
+      font-size: $font-size-base * 3.5;
    }
 }
 
 .answer-question-link {
    @include media-breakpoint-only(xs) {
-      font-size: $font-size-base * 0.75;
+      margin-top: 12px;
    }
    @include media-breakpoint-only(sm) {
-      font-size: $font-size-base * 1;
-      margin-top: 25px;
+      font-size: $font-size-base;
+      margin-top: 15px;
    }
    @include media-breakpoint-only(md) {
       font-size: $font-size-base * 1.25;
-      margin-top: 50px;
+      margin-top: 20px;
    }
    @include media-breakpoint-only(lg) {
       font-size: $font-size-base * 1.5;
-      margin-top: 68px;
+      margin-top: 30px;
    }
    @include media-breakpoint-only(xl) {
       font-size: $font-size-base * 2;
-      margin-top: 90px;
+      margin-top: 39px;
    }
 }
 
@@ -69,51 +60,41 @@ p,
 .sign-up,
 .submit-question-button,
 .submit-answer-button {
-   font-size: 32px;
-}
-
-input[type="text"] {
-   border-radius: 15px;
-}
-
-.submit-question-button,
-.submit-answer-button {
-   border: none;
+   font-size: 24px;
 }
 
 img {
    @include media-breakpoint-only(xs) {
-      width: 25px;
-      margin-top: 0px;
+      width: 30px;
       margin-bottom: 20px;
    }
    @include media-breakpoint-only(sm) {
-      width: 38px;
-      margin-top: 0px;
-      margin-bottom: 29px;
+      width: 30px;
+      margin-bottom: 22px;
    }
    @include media-breakpoint-only(md) {
-      width: 52px;
-      margin-bottom: 44px;
+      width: 35px;
+      margin-bottom: 27px;
    }
    @include media-breakpoint-only(lg) {
-      width: 75px;
-      margin-bottom: 60px;
+      width: 45px;
+      margin-bottom: 37px;
    }
    @include media-breakpoint-only(xl) {
-      width: 75px;
-      margin-bottom: 70px;
+      width: 45px;
+      margin-bottom: 37px;
    }
 }
 
 input[type="text"] {
    @include media-breakpoint-only(xs) {
-      font-size: 20px;
+      font-size: 24px;
    }
 }
 
 .header-solid {
    background-color: $gray-900;
+   height: 90px;
 }
 
 a:hover {
