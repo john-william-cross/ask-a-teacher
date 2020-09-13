@@ -11,7 +11,10 @@ a {
 }
 .logo-text {
    font-family: "Playfair Display", serif;
-
+   @include media-breakpoint-only(xs) {
+      font-size: $font-size-base * 2;
+      line-height: 0;
+   }
    @include media-breakpoint-only(sm) {
       font-size: $font-size-base * 2.25;
    }
