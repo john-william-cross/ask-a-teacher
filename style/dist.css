@@ -11360,7 +11360,7 @@ a {
 }
 @media (max-width: 575.98px) {
   .logo-text {
-    font-size: 2.625rem;
+    font-size: 2.25rem;
     line-height: 0;
   }
 }
@@ -11383,6 +11383,7 @@ a {
 @media (min-width: 1200px) {
   .logo-text {
     font-size: 4.5rem;
+    margin-top: 20px;
   }
 }
 
@@ -11393,7 +11394,6 @@ a {
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
   .answer-question-link {
-    font-size: 1.5rem;
     margin-top: 12px;
   }
 }
@@ -11406,13 +11406,13 @@ a {
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .answer-question-link {
     font-size: 1.875rem;
-    margin-top: 35px;
+    margin-top: 28px;
   }
 }
 @media (min-width: 1200px) {
   .answer-question-link {
     font-size: 2.25rem;
-    margin-top: 47px;
+    margin-top: 35px;
   }
 }
 
@@ -11443,8 +11443,8 @@ a {
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
   img {
-    width: 35px;
-    margin-bottom: 27px;
+    width: 43px;
+    margin-bottom: 30px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -11455,8 +11455,8 @@ a {
 }
 @media (min-width: 1200px) {
   img {
-    width: 45px;
-    margin-bottom: 37px;
+    width: 55px;
+    margin-bottom: 44px;
   }
 }
 
@@ -11468,7 +11468,7 @@ a {
 
 .header-solid {
   background-color: #141518;
-  height: 100px;
+  height: 90px;
 }
 
 a:hover {

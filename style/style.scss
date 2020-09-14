@@ -12,7 +12,7 @@ a {
 .logo-text {
    font-family: "Playfair Display", serif;
    @include media-breakpoint-only(xs) {
-      font-size: $font-size-base * 1.75;
+      font-size: $font-size-base * 1.5;
       line-height: 0;
    }
    @include media-breakpoint-only(sm) {
@@ -27,6 +27,7 @@ a {
    }
    @include media-breakpoint-only(xl) {
       font-size: $font-size-base * 3;
+      margin-top: 20px;
    }
 }
 
@@ -35,7 +36,6 @@ a {
       margin-top: 20px;
    }
    @include media-breakpoint-only(sm) {
-      font-size: $font-size-base;
       margin-top: 12px;
    }
    @include media-breakpoint-only(md) {
@@ -44,11 +44,11 @@ a {
    }
    @include media-breakpoint-only(lg) {
       font-size: $font-size-base * 1.25;
-      margin-top: 35px;
+      margin-top: 28px;
    }
    @include media-breakpoint-only(xl) {
       font-size: $font-size-base * 1.5;
-      margin-top: 47px;
+      margin-top: 35px;
    }
 }
 
@@ -75,16 +75,16 @@ img {
       margin-bottom: 20px;
    }
    @include media-breakpoint-only(md) {
-      width: 35px;
-      margin-bottom: 27px;
+      width: 43px;
+      margin-bottom: 30px;
    }
    @include media-breakpoint-only(lg) {
       width: 45px;
       margin-bottom: 37px;
    }
    @include media-breakpoint-only(xl) {
-      width: 45px;
-      margin-bottom: 37px;
+      width: 55px;
+      margin-bottom: 44px;
    }
 }
 
@@ -96,7 +96,7 @@ input[type="text"] {
 
 .header-solid {
    background-color: $gray-900;
-   height: 100px;
+   height: 90px;
 }
 
 a:hover {
