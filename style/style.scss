@@ -64,9 +64,6 @@ a {
 .thank-you-message {
    color: $success;
 }
-.question {
-   margin-top: 20px;
-}
 
 img {
    @include media-breakpoint-only(xs) {
