@@ -12,11 +12,12 @@ a {
 .logo-text {
    font-family: "Playfair Display", serif;
    @include media-breakpoint-only(xs) {
-      font-size: $font-size-base * 1.5;
+      font-size: $font-size-base * 1.75;
       line-height: 0;
    }
    @include media-breakpoint-only(sm) {
-      font-size: $font-size-base * 1.5;
+      font-size: $font-size-base * 1.75;
+      line-height: 0;
    }
    @include media-breakpoint-only(md) {
       font-size: $font-size-base * 2.25;
@@ -31,31 +32,36 @@ a {
 
 .answer-question-link {
    @include media-breakpoint-only(xs) {
-      margin-top: 12px;
+      margin-top: 20px;
    }
    @include media-breakpoint-only(sm) {
       font-size: $font-size-base;
-      margin-top: 25px;
+      margin-top: 12px;
    }
    @include media-breakpoint-only(md) {
       font-size: $font-size-base;
-      margin-top: 30px;
+      margin-top: 27px;
    }
    @include media-breakpoint-only(lg) {
       font-size: $font-size-base * 1.25;
-      margin-top: 25px;
+      margin-top: 35px;
    }
    @include media-breakpoint-only(xl) {
       font-size: $font-size-base * 1.5;
-      margin-top: 32px;
+      margin-top: 47px;
    }
 }
 
-.answer-question-link {
-   color: white;
+.submit-new-question {
    font-weight: $font-weight-bold;
 }
 
+.answer-question-link {
+   font-weight: $font-weight-bold;
+   color: white;
+}
+
+p,
 .form-control,
 .question,
 .submit-question-button,
@@ -81,7 +87,7 @@ img {
    }
    @include media-breakpoint-only(sm) {
       width: 30px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
    }
    @include media-breakpoint-only(md) {
       width: 35px;
@@ -105,7 +111,7 @@ input[type="text"] {
 
 .header-solid {
    background-color: $gray-900;
-   height: 90px;
+   height: 100px;
 }
 
 a:hover {

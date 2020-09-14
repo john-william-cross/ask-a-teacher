@@ -11360,13 +11360,14 @@ a {
 }
 @media (max-width: 575.98px) {
   .logo-text {
-    font-size: 2.25rem;
+    font-size: 2.625rem;
     line-height: 0;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
   .logo-text {
-    font-size: 2.25rem;
+    font-size: 2.625rem;
+    line-height: 0;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -11387,39 +11388,44 @@ a {
 
 @media (max-width: 575.98px) {
   .answer-question-link {
-    margin-top: 12px;
+    margin-top: 20px;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
   .answer-question-link {
     font-size: 1.5rem;
-    margin-top: 25px;
+    margin-top: 12px;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
   .answer-question-link {
     font-size: 1.5rem;
-    margin-top: 30px;
+    margin-top: 27px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .answer-question-link {
     font-size: 1.875rem;
-    margin-top: 25px;
+    margin-top: 35px;
   }
 }
 @media (min-width: 1200px) {
   .answer-question-link {
     font-size: 2.25rem;
-    margin-top: 32px;
+    margin-top: 47px;
   }
 }
 
-.answer-question-link {
-  color: white;
+.submit-new-question {
   font-weight: 700;
 }
 
+.answer-question-link {
+  font-weight: 700;
+  color: white;
+}
+
+p,
 .form-control,
 .question,
 .submit-question-button,
@@ -11448,7 +11454,7 @@ a {
 @media (min-width: 576px) and (max-width: 767.98px) {
   img {
     width: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -11478,7 +11484,7 @@ a {
 
 .header-solid {
   background-color: #141518;
-  height: 90px;
+  height: 100px;
 }
 
 a:hover {

@@ -1,4 +1,3 @@
-<!-- on this page, show things that come up when typing in search box on index page (include "top questions" and dropdown) -->
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
@@ -8,20 +7,20 @@
          rel="stylesheet"
       />
       <link rel="stylesheet" href="style/dist.css" />
-      <title>Ask a Teacher</title>
+      <title>Questions</title>
    </head>
    <body>
       <div class="header-solid fixed-top">
          <div class="container mt-3 mt-sm-4 mt-md-3 mt-lg-2 mt-xl-n1">
             <a
-               href="questions.html"
+               href="sign-in-sign-up.html"
                class="float-right answer-question-link"
                style="color: white"
             >
                <p>Answer a question</p>
             </a>
             <a href="index.html"
-               ><img class="mt-sm-3" src="icons/white-logo.svg" />
+               ><img src="icons/white-logo.svg" />
                <h1 class="d-inline logo-text ml-2" style="color: white" ;>
                   Ask a Teacher
                </h1></a
@@ -38,7 +37,7 @@
                   <div class="col-12">
                      <h1 class="d-inline">Top Questions</h1>
                      <select
-                        class="form-control form-control-sm d-inline mt-4 float-right"
+                        class="col-4 form-control form-control-sm d-inline mt-4 float-right"
                         name="questions"
                         id="questions-select"
                      >
@@ -47,12 +46,12 @@
                         <option value="trending">Trending</option>
                         <option value="answered">Answered</option>
                      </select>
-                     <div class="lead question">
-                        <p>
-                           What is the difference between an infrence and a
-                           predikshun?
-                        </p>
-                     </div>
+
+                     <p class="lead questions">
+                        What is the difference between an infrence and a
+                        predikshun?
+                     </p>
+
                      <div class="question">
                         <p class="text-muted d-inline">Asked on June 1, 2020</p>
                         <p class="text-muted d-inline float-right">5 answers</p>
@@ -191,9 +190,7 @@
                               background-color: gray;
                            "
                         />
-                     </div>
-                     <div class="row">
-                        <div class="question col-12">
+                        <div class="question">
                            <div class="answer-submitted">
                               <h2>Your answer</h2>
                               <textarea
@@ -213,47 +210,48 @@
                            >
                               Thanks, your answer has been submitted!
                            </p>
+                           <hr
+                              style="
+                                 height: 2px;
+                                 border-width: 0;
+                                 color: gray;
+                                 background-color: gray;
+                              "
+                           />
                         </div>
                      </div>
                   </div>
-               </div>
 
-               <br />
-               <hr
-                  style="
-                     height: 2px;
-                     border-width: 0;
-                     color: gray;
-                     background-color: gray;
-                  "
-               />
-               <div class="question">
-                  <a href="/answer.html">
-                     <p class="lead">
-                        What is the area model of multiplication?
-                     </p>
-                  </a>
-               </div>
-               <div class="question">
-                  <p class="text-muted d-inline">Asked on May 23, 2020</p>
-                  <p class="text-muted d-inline float-right">2 answers</p>
-                  <br /><br />
-               </div>
+                  <br />
 
-               <div class="question">
-                  <a href="/answer.html">
-                     <p class="lead">
-                        I don’t know anything about common core my child is
-                        having trouble with math and I don’t know how he’s
-                        supposed to do it he says I’m not showing him the right
-                        way please help
-                     </p>
-                  </a>
-               </div>
-               <div class="question">
-                  <p class="text-muted d-inline">Asked on May 20, 2020</p>
-                  <p class="text-muted d-inline float-right">1 answer</p>
-                  <br /><br />
+                  <div class="question">
+                     <a href="/answer.html">
+                        <p class="lead question">
+                           What is the area model of multiplication?
+                        </p>
+                     </a>
+                  </div>
+                  <div class="question">
+                     <p class="text-muted d-inline">Asked on May 23, 2020</p>
+                     <p class="text-muted d-inline float-right">2 answers</p>
+                     <br /><br />
+                  </div>
+
+                  <div class="question">
+                     <a href="/answer.html">
+                        <p class="lead">
+                           I don’t know anything about common core my child is
+                           having trouble with math and I don’t know how he’s
+                           supposed to do it he says I’m not showing him the
+                           right way please help
+                        </p>
+                     </a>
+                  </div>
+                  <div class="question">
+                     <p class="text-muted d-inline">Asked on May 20, 2020</p>
+                     <p class="text-muted d-inline float-right">1 answer</p>
+                     <br /><br />
+                  </div>
                </div>
             </div>
          </div>
