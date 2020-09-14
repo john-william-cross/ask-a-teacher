@@ -1,7 +1,7 @@
 $(".form-control").on("input", function () {
    // code below targets the id "overlay-sucess"; for toggleClass,
    // it means "if d-flex is on, turn it off; if d-none is on, turn it off"
-   $(".question").toggleClass("d-flex d-none");
+   $(".question").toggleClass("d-none");
    $(".ask-new-question").toggleClass("d-flex d-none");
 });
 

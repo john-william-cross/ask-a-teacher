@@ -18,19 +18,20 @@
    <body>
       <div class="header-solid fixed-top">
          <div class="container mt-3 mt-sm-4 mt-md-3 mt-lg-2 mt-xl-n1">
-            <a
-               href="sign-in-sign-up.html"
-               class="float-right answer-question-link"
-               style="color: white"
-            >
-               <p>Answer a question</p>
-            </a>
-            <a href="index.html"
+            <!-- take out p tags within a tags -->
+            <a class="no-underline" href="index.html"
                ><img src="icons/white-logo.svg" />
-               <h1 class="d-inline logo-text ml-2" style="color: white" ;>
+               <h1 class="logo-text-font d-inline logo-text-size ml-2">
                   Ask a Teacher
                </h1></a
             >
+
+            <a
+               href="sign-in-sign-up.html"
+               class="float-right answer-question-link"
+            >
+               Answer a question
+            </a>
          </div>
       </div>
       <div class="container">
@@ -38,7 +39,10 @@
             <div
                class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2 mt-9"
             >
-               <p class="mt-3 lead logo-text" style="text-align: center">
+               <p
+                  class="mt-3 lead logo-text-size logo-text-font"
+                  style="text-align: center"
+               >
                   Ask a teacher
                </p>
                <textarea
@@ -50,7 +54,7 @@
 
                <div class="question text-center d-none">
                   <p class="mt-3">Don't see what you're looking for?</p>
-                  <!-- fix centering here -->
+
                   <a
                      class="submit-new-question mt-1"
                      href="submit-question.html"
