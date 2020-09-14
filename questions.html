@@ -1,3 +1,4 @@
+<!-- on this page, show things that come up when typing in search box on index page (include "top questions" and dropdown) -->
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
@@ -14,7 +15,6 @@
          <div class="container mt-3 mt-sm-4 mt-md-3 mt-lg-2 mt-xl-n1">
             <a
                href="questions.html"
-               target="_top"
                class="float-right answer-question-link"
                style="color: white"
             >
@@ -34,20 +34,19 @@
             <div
                class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2 mt-9"
             >
-               <div class="row col-12">
-                  <h1 class="d-inline">Top Questions</h1>
-                  <select
-                     class="d-inline sort-prompt mt-4 form-control form-control-lg"
-                  >
-                     <option>Newest</option>
-                     <option>Unanswered</option>
-                     <option>Trending</option>
-                     <option>Answered</option>
-                  </select>
-               </div>
-
                <div class="row no-gutters">
                   <div class="col-12">
+                     <h1 class="d-inline">Top Questions</h1>
+                     <select
+                        class="form-control form-control-sm d-inline mt-4 float-right"
+                        name="questions"
+                        id="questions-select"
+                     >
+                        <option value="newest">Newest</option>
+                        <option value="unanswered">Unanswered</option>
+                        <option value="trending">Trending</option>
+                        <option value="answered">Answered</option>
+                     </select>
                      <div class="lead question">
                         <p>
                            What is the difference between an infrence and a
@@ -161,6 +160,8 @@
                         <br />
                         <p>
                            This question was answered by a teacher in Nevada.
+
+                           <!-- "answered by... use text muted" -->
                         </p>
                         <br />
                         <hr
