@@ -363,7 +363,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 h3, .h3 {
@@ -11420,14 +11420,16 @@ a {
   font-weight: 700;
 }
 
-.form-control,
 p,
+.form-control,
 .question,
-.sign-in,
-.sign-up,
 .submit-question-button,
 .submit-answer-button {
   font-size: 24px;
+}
+
+.thank-you-message {
+  color: #2f52b9;
 }
 
 .question {

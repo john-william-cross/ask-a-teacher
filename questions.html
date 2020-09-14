@@ -35,8 +35,10 @@
                class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2 mt-9"
             >
                <div>
-                  <h2>Top Questions</h2>
-                  <select class="sort-prompt form-control form-control-lg">
+                  <h1>Top Questions</h1>
+                  <select
+                     class="col-5 sort-prompt form-control form-control-lg"
+                  >
                      <option>Newest</option>
                      <option>Unanswered</option>
                      <option>Trending</option>
@@ -195,20 +197,20 @@
                               <h2>Your answer</h2>
                               <textarea
                                  rows="11"
-                                 autofocus
                                  style="width: 100%"
                               ></textarea>
+
+                              <input
+                                 class="mt-6 submit-answer-button btn btn-lg btn-outline-primary"
+                                 type="submit"
+                                 value="Submit answer"
+                              />
                            </div>
-                           <input
-                              class="mt-6 submit-answer-button btn btn-lg btn-outline-primary"
-                              type="submit"
-                              value="Submit answer"
-                           />
                            <p
                               class="thank-you-message d-none"
                               style="font-size: 24px"
                            >
-                              Thanks for your answer!
+                              Thanks, your answer has been submitted!
                            </p>
                         </div>
                      </div>

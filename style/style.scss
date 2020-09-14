@@ -56,16 +56,17 @@ a {
    font-weight: $font-weight-bold;
 }
 
-.form-control,
 p,
+.form-control,
 .question,
-.sign-in,
-.sign-up,
 .submit-question-button,
 .submit-answer-button {
    font-size: 24px;
 }
 
+.thank-you-message {
+   color: $success;
+}
 .question {
    margin-top: 20px;
 }
