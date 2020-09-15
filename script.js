@@ -10,6 +10,7 @@ $(".answer-a-question").click(function () {
 });
 
 $(".sign-up-prompt").click(function () {
+   $(".return-user-sign-in").toggleClass("d-none");
    $(".show-sign-up-info").toggleClass("d-none");
    $(".email-and-create-password").toggleClass("d-none");
 });
