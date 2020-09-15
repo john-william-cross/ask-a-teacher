@@ -11501,6 +11501,10 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.form-control {
+  resize: none;
+}
+
 a {
   font-weight: 700;
 }
@@ -11571,7 +11575,8 @@ a {
   }
 }
 
-.submit-new-question {
+.submit-new-question,
+.sign-up-prompt {
   font-weight: 700;
 }
 
@@ -11612,12 +11617,6 @@ a {
   img {
     width: 55px;
     margin-bottom: 44px;
-  }
-}
-
-@media (max-width: 575.98px) {
-  input[type=text] {
-    font-size: 24px;
   }
 }
 

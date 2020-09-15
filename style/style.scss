@@ -1,5 +1,9 @@
 //this is for things that aren't bootstrap variables
 
+.form-control {
+   resize: none;
+}
+
 a {
    font-weight: $font-weight-bold;
 }
@@ -54,7 +58,8 @@ a {
    }
 }
 
-.submit-new-question {
+.submit-new-question,
+.sign-up-prompt {
    font-weight: $font-weight-bold;
 }
 
@@ -90,11 +95,11 @@ img {
    }
 }
 
-input[type="text"] {
-   @include media-breakpoint-only(xs) {
-      font-size: 24px;
-   }
-}
+// input[type="text"] {
+//    @include media-breakpoint-only(xs) {
+//       font-size: 24px;
+//    }
+// }
 
 .header-solid {
    background-color: $gray-900;
