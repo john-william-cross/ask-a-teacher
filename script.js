@@ -14,3 +14,19 @@ $(".sign-up-prompt").click(function () {
    $(".show-sign-up-info").toggleClass("d-none");
    $(".email-and-create-password").toggleClass("d-none");
 });
+
+let inputPasswordCharCount = 0;
+
+$("#password-input").keypress(function () {
+   inputPasswordCharCount++;
+   console.log("total inputted chars: ", inputPasswordCharCount);
+   $("#input-password-char-count").html(inputPasswordCharCount);
+});
+
+let createPasswordCharCount = 0;
+
+$("#create-password-input").keypress(function () {
+   createPasswordCharCount++;
+   console.log("total inputted chars: ", createPasswordCharCount);
+   $("#create-password-char-count").html(createPasswordCharCount);
+});
