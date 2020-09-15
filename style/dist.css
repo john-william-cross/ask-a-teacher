@@ -11620,6 +11620,13 @@ a {
   }
 }
 
+hr {
+  height: 2px;
+  border-width: 0;
+  color: #cccdd2;
+  background-color: #cccdd2;
+}
+
 .header-solid {
   background-color: #141518;
   height: 90px;

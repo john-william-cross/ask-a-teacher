@@ -95,6 +95,13 @@ img {
    }
 }
 
+hr {
+   height: 2px;
+   border-width: 0;
+   color: $gray-100;
+   background-color: $gray-100;
+}
+
 // input[type="text"] {
 //    @include media-breakpoint-only(xs) {
 //       font-size: 24px;
