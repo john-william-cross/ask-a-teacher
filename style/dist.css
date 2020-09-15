@@ -11547,33 +11547,8 @@ a {
 
 .answer-question-link {
   line-height: 1;
+  margin-bottom: 5px;
 }
-@media (max-width: 575.98px) {
-  .answer-question-link {
-    margin-top: 48px;
-  }
-}
-@media (min-width: 576px) and (max-width: 767.98px) {
-  .answer-question-link {
-    margin-top: 68px;
-  }
-}
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .answer-question-link {
-    margin-top: 35px;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  .answer-question-link {
-    margin-top: 42px;
-  }
-}
-@media (min-width: 1200px) {
-  .answer-question-link {
-    margin-top: 54px;
-  }
-}
-
 .submit-new-question,
 .sign-up-prompt {
   font-weight: 700;
