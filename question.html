@@ -149,17 +149,22 @@
                         <hr class="my-6" />
                      </div>
 
-                     <div class="question">
-                        <div class="answer-submitted">
-                           <h2>Your answer</h2>
-                           <textarea rows="11" style="width: 100%"></textarea>
+                     <div class="answer-submitted">
+                        <h1 class="lead">Your answer</h1>
+                        <textarea
+                           id="answer-input"
+                           rows="10"
+                           style="width: 100%"
+                        ></textarea>
+                        <p class="text-muted float-right">
+                           <span id="answer-input-char-count">0</span>/500
+                        </p>
 
-                           <input
-                              class="mt-5 mb-8 submit-answer-button logo-text-font btn btn-lg btn-outline-primary"
-                              type="submit"
-                              value="Submit answer"
-                           />
-                        </div>
+                        <input
+                           class="mt-5 mb-8 submit-answer-button logo-text-font btn btn-lg btn-outline-primary"
+                           type="submit"
+                           value="Submit answer"
+                        />
                      </div>
                   </div>
                </div>
