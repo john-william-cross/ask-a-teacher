@@ -15,18 +15,27 @@ $(".sign-up-prompt").click(function () {
    $(".email-and-create-password").toggleClass("d-none");
 });
 
-let inputPasswordCharCount = 0;
+let questionInputCharCount = 0;
 
-$("#password-input").keypress(function () {
-   inputPasswordCharCount++;
-   console.log("total inputted chars: ", inputPasswordCharCount);
-   $("#input-password-char-count").html(inputPasswordCharCount);
-});
+$("#question-input").keydown(function (e) {
+   const key = e.which;
+   console.log("key inputted: ", key);
+   if (key === 8) {
+      console.log("the user has pressed backspace!");
+      questionInputCharCount--;
+      if (questionInputCharCount < 0) {
+         console.log("You have entered negative territory!");
+         questionInputCharCount = 0;
+      }
+   } else if (key === 16) {
+      console.log("Shift was pressed");
+   } else if (key === 18) {
+      console.log("Option was pressed");
+   } else {
+      console.log("the user pressed any other key");
+      questionInputCharCount++;
+   }
 
-let createPasswordCharCount = 0;
-
-$("#create-password-input").keypress(function () {
-   createPasswordCharCount++;
-   console.log("total inputted chars: ", createPasswordCharCount);
-   $("#create-password-char-count").html(createPasswordCharCount);
+   console.log("total inputted chars: ", questionInputCharCount);
+   $("#question-input-char-count").html(questionInputCharCount);
 });
