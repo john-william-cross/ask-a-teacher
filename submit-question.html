@@ -55,16 +55,20 @@
                <p class="lead mt-5">Enter your email</p>
                <input
                   type="text"
-                  class="form-control form-control-lg mt-4"
+                  id="enter-email-input"
+                  class="is-invalid form-control form-control-lg mt-4"
                   aria-label="enter your email"
                   aria-describedby="enter email"
                />
+               <p id="enter-email-notification" class="lead-mt-5 text-danger">
+                  Please enter your email address
+               </p>
 
                <div
                   class="mt-6 text-center col-12 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1"
                >
                   <input
-                     class="logo-text-font submit-question-button btn btn-lg btn-outline-secondary"
+                     class="logo-text-font submit-question-button btn btn-lg btn-outline-secondary mb-8"
                      id="ask-a-teacher-submit-button"
                      disabled
                      type="submit"
