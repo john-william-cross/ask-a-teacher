@@ -156,12 +156,18 @@
                            rows="10"
                            style="width: 100%"
                         ></textarea>
-                        <p class="text-muted float-right">
-                           <span id="answer-input-char-count">0</span>/500
+                        <p class="float-right text-muted">
+                           <span
+                              class="text-danger"
+                              id="answer-input-char-count"
+                              >0</span
+                           >/2000
                         </p>
 
                         <input
                            class="mt-5 mb-8 submit-answer-button logo-text-font btn btn-lg btn-outline-primary"
+                           id="submit-answer"
+                           disabled
                            type="submit"
                            value="Submit answer"
                         />
