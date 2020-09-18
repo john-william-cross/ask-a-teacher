@@ -175,39 +175,6 @@ $(`#question-input, #enter-email-input`).keyup(function (e) {
    }
 });
 
-// $(`#question-input`).keyup(function (e) {
-//    console.log(`Event: `, e);
-
-//   // // get the text from the text area
-//    const text = e.target.value;
-//    const username = `John`;
-//    console.log(`${username} inputted: ${text}`);
-
-//    //// check the length of the text
-//    const textLength = text.length;
-//    console.log(`Total inputted chars: ${textLength}`);
-
-//    //// update the character counter on the page
-//    $(`#question-input-char-count`).html(textLength);
-
-//    if (textLength > 0 && textLength < 501) {
-//       console.log(`text was entered`);
-//       $(`#ask-a-teacher-submit-button`).removeAttr(`disabled`);
-//       $(`#question-input-char-count`).removeClass(`text-danger`);
-//       $(`#question-input-char-count`).addClass(`text-muted`);
-//    }
-//    if (textLength > 500 || textLength === 0) {
-//       console.log(`incorrect num of characters`);
-//       $(`#ask-a-teacher-submit-button`).attr(`disabled`, `disabled`);
-//       $(`#question-input-char-count`).removeClass(`text-muted`);
-//       $(`#question-input-char-count`).addClass(`text-danger`);
-//    }
-//   // // else {
-//   // //    $(`#ask-a-teacher-submit-button`).attr(`disabled`, `disabled`);
-//   // //    $(`#question-input-char-count`).addClass(`text-danger`);
-//   // // }
-// });
-
 $(`#ask-a-teacher-submit-button`).click(function (e) {
    console.log(`Event: `, e);
    const text = e.target.value;
