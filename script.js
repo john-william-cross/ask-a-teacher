@@ -15,6 +15,21 @@ $(".sign-up-prompt").click(function () {
    $(".email-and-create-password").toggleClass("d-none");
 });
 
+$(`#return-user-sign-in-button`).click(function (e) {
+   console.log(`you clicked on sign in!`);
+   const returnUserEmail = $(`#return-user-email-input`).val();
+   console.log(`value of return user email is: ${returnUserEmail}`);
+   const returnUserEmailLength = returnUserEmail.length;
+   console.log(`length of return user email is: ${returnUserEmailLength}`);
+   if (returnUserEmailLength === 0) {
+      $(`#no-email-error`).removeClass(`d-none`);
+      $(`#return-user-email-input`).addClass(`is-invalid`);
+   } else {
+      $(`#no-email-error`).addClass(`d-none`);
+      $(`#return-user-email-input`).removeClass(`is-invalid`);
+   }
+});
+
 $(`#question-input, #enter-email-input`).keyup(function (e) {
    const questionText = $(`#question-input`).val();
    const emailText = $(`#enter-email-input`).val();
