@@ -32,8 +32,8 @@ $(`#return-user-sign-in-button`).click(function (e) {
    const returnUserPasswordLength = returnUserPassword.length;
 
    if (returnUserPasswordLength === 0) {
-      $(`#return-user-no-password-error`).removeClass(`d-none`);
       $(`#return-user-password-input`).addClass(`is-invalid`);
+      $(`#return-user-no-password-error`).removeClass(`d-none`);
       $(`#return-user-password-length-error`).addClass(`d-none`);
    } else if (returnUserPasswordLength < 8) {
       $(`#return-user-password-length-error`).removeClass(`d-none`);
@@ -102,13 +102,13 @@ $(`#new-user-sign-up-button`).click(function (e) {
    }
 
    const newUserPassword = $(`#new-user-password-input`).val();
-   const returnUserPasswordLength = returnUserPassword.length;
+   const newUserPasswordLength = newUserPassword.length;
 
-   if (returnUserPasswordLength === 0) {
+   if (newUserPasswordLength === 0) {
       $(`#new-user-no-password-error`).removeClass(`d-none`);
       $(`#new-user-password-input`).addClass(`is-invalid`);
       $(`#new-user-password-length-error`).addClass(`d-none`);
-   } else if (returnUserPasswordLength < 8) {
+   } else if (newUserPasswordLength < 8) {
       $(`#new-user-password-length-error`).removeClass(`d-none`);
       $(`#new-user-no-password-error`).addClass(`d-none`);
       $(`#new-user-password-input`).addClass(`is-invalid`);
@@ -118,18 +118,29 @@ $(`#new-user-sign-up-button`).click(function (e) {
       $(`#new-user-password-input`).removeClass(`is-invalid`);
    }
 
-   // if (newUserPasswordLength === 0) {
-   //    $(`#new-user-no-password-error`).removeClass(`d-none`);
-   //    $(`#new-user-password`).addClass(`is-invalid`);
-   // } else if (newUserPasswordLength < 9) {
-   //    $(`#password-length-error-message`).removeClass(`d-none`);
-   //    $(`#missing-password-error-message`).addClass(`d-none`);
-   //    $(`#new-user-password`).addClass(`is-invalid`);
-   // } else {
-   //    $(`#missing-password-error-message`).addClass(`d-none`);
-   //    $(`#password-length-error-message`).addClass(`d-none`);
-   //    $(`#new-user-password`).removeClass(`is-invalid`);
-   // }
+   trimmedNewUserEmail = newUserEmail.trim();
+
+   delimiter = `@`;
+   indexofAtSymbolDelimiter = trimmedNewUserEmail.indexOf(delimiter);
+
+   const localPartTrimmedNewUserEmail = trimmedNewUserEmail.slice(
+      0,
+      indexofAtSymbolDelimiter
+   );
+
+   const localPartTrimmedNewUserEmailLength =
+      localPartTrimmedNewUserEmail.length;
+
+   if (
+      newUserPassword.includes(localPartTrimmedNewUserEmail) &&
+      localPartTrimmedNewUserEmailLength >= 4
+   ) {
+      $(`#reused-string-error-message`).removeClass(`d-none`);
+      $(`#return-user-password-input`).addClass(`is-invalid`);
+   } else {
+      $(`#new-user-reused-string-error-message`).addClass(`d-none`);
+      $(`#new-user-password-input`).removeClass(`is-invalid`);
+   }
 });
 
 $(`#question-input, #enter-email-input`).keyup(function (e) {
@@ -149,12 +160,6 @@ $(`#question-input, #enter-email-input`).keyup(function (e) {
       $(`#question-input-char-count`).removeClass(`text-danger`);
    } else {
       $(`#question-input-char-count`).addClass(`text-danger`);
-   }
-
-   if (emailTextLength > 0) {
-      $(`#enter-email-notification`).addClass(`d-none`);
-   } else {
-      $(`#enter-email-notification`).removeClass(`d-none`);
    }
 
    if (
@@ -203,14 +208,20 @@ $(`#question-input, #enter-email-input`).keyup(function (e) {
 //   // // }
 // });
 
-// $(`#ask-a-teacher-submit-button`).click(function (e) {
-//    console.log(`Event: `, e);
-//    const text = e.target.value;
-//    const textLength = text.length;
-//    $(`#enter-email-notification`).toggleClass(`d-none`);
-//    if (textLength > 0) {
-//    }
-// });
+$(`#ask-a-teacher-submit-button`).click(function (e) {
+   console.log(`Event: `, e);
+   const text = e.target.value;
+   const textLength = text.length;
+   $(`#enter-email-notification`).toggleClass(`d-none`);
+   if (textLength > 0) {
+   }
+   if (emailTextLength === 0) {
+      console.log(`you didn't enter anything into the email box`);
+      $(`#enter-email-notification`).removeClass(`d-none`);
+   } else {
+      $(`#enter-email-notification`).removeClass(`d-none`);
+   }
+});
 
 $(`#answer-input`).keyup(function (e) {
    console.log(`Event: `, e);
