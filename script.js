@@ -45,6 +45,8 @@ $(`#return-user-sign-in-button`).click(function (e) {
       $(`#return-user-password-input`).removeClass(`is-invalid`);
    }
 
+   //testcomment
+
    // if (newUserPasswordLength === 0) {
    //    $(`#missing-password-error-message`).removeClass(`d-none`);
    //    $(`#new-user-password`).addClass(`is-invalid`);
