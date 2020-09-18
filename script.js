@@ -45,6 +45,47 @@ $(`#return-user-sign-in-button`).click(function (e) {
       $(`#return-user-password-input`).removeClass(`is-invalid`);
    }
 
+   trimmedReturnUserEmail = returnUserEmail.trim();
+   console.log(`Returning user email address is ${returnUserEmail}`);
+   console.log(`Trimmed new user email address is ${trimmedReturnUserEmail}.`);
+
+   const delimiter = `@`;
+   const indexofAtSymbolDelimiter = trimmedReturnUserEmail.indexOf(delimiter);
+   console.log(
+      `the @ symbol in the trimmed return user email is at index: ${indexofAtSymbolDelimiter}`
+   );
+
+   const localPartTrimmedReturnUserEmail = trimmedReturnUserEmail.slice(
+      0,
+      indexofAtSymbolDelimiter
+   );
+   console.log(
+      `the local part of the trimmed return user email is ${localPartTrimmedReturnUserEmail}`
+   );
+
+   console.log(
+      `the length of the local part trimmed return user email is: ${localPartTrimmedReturnUserEmail.length}.`
+   );
+
+   const localPartTrimmedReturnUserEmailLength =
+      localPartTrimmedReturnUserEmail.length;
+
+   if (
+      returnUserPassword.includes(localPartTrimmedReturnUserEmail) &&
+      localPartTrimmedReturnUserEmailLength >= 4
+   ) {
+      console.log(
+         `The password ${returnUserPassword} includes the string ${localPartTrimmedReturnUserEmail}, so it can't be used!`
+      );
+      $(`#reused-string-error-message`).removeClass(`d-none`);
+      $(`#return-user-password-input`).addClass(`is-invalid`);
+   } else {
+      console.log(
+         `the return user password does not contain the string: ${localPartTrimmedReturnUserEmail}. Good on you, return user.`
+      );
+      $(`#reused-string-error-message`).addClass(`d-none`);
+      $(`#return-user-password-input`).removeClass(`is-invalid`);
+   }
    //testcomment
 
    // if (newUserPasswordLength === 0) {
