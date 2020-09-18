@@ -34,6 +34,7 @@ $(`#return-user-sign-in-button`).click(function (e) {
    if (returnUserPasswordLength === 0) {
       $(`#return-user-no-password-error`).removeClass(`d-none`);
       $(`#return-user-password-input`).addClass(`is-invalid`);
+      $(`#return-user-password-length-error`).addClass(`d-none`);
    } else if (returnUserPasswordLength < 8) {
       $(`#return-user-password-length-error`).removeClass(`d-none`);
       $(`#return-user-no-password-error`).addClass(`d-none`);
