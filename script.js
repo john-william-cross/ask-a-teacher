@@ -86,10 +86,40 @@ $(`#return-user-sign-in-button`).click(function (e) {
       $(`#reused-string-error-message`).addClass(`d-none`);
       $(`#return-user-password-input`).removeClass(`is-invalid`);
    }
-   //testcomment
+});
+
+$(`#new-user-sign-up-button`).click(function (e) {
+   console.log("you clicked on sign up!");
+   const newUserEmail = $(`#new-user-email-input`).val();
+   const newUserEmailLength = newUserEmail.length;
+
+   if (newUserEmailLength === 0) {
+      $(`#new-user-no-email-error`).removeClass(`d-none`);
+      $(`#new-user-email-input`).addClass(`is-invalid`);
+   } else {
+      $(`#new-user-no-email-error`).addClass(`d-none`);
+      $(`#new-user-email-input`).removeClass(`is-invalid`);
+   }
+
+   const newUserPassword = $(`#new-user-password-input`).val();
+   const returnUserPasswordLength = returnUserPassword.length;
+
+   if (returnUserPasswordLength === 0) {
+      $(`#new-user-no-password-error`).removeClass(`d-none`);
+      $(`#new-user-password-input`).addClass(`is-invalid`);
+      $(`#new-user-password-length-error`).addClass(`d-none`);
+   } else if (returnUserPasswordLength < 8) {
+      $(`#new-user-password-length-error`).removeClass(`d-none`);
+      $(`#new-user-no-password-error`).addClass(`d-none`);
+      $(`#new-user-password-input`).addClass(`is-invalid`);
+   } else {
+      $(`#new-user-password-length-error`).addClass(`d-none`);
+      $(`#new-user-no-password-error`).addClass(`d-none`);
+      $(`#new-user-password-input`).removeClass(`is-invalid`);
+   }
 
    // if (newUserPasswordLength === 0) {
-   //    $(`#missing-password-error-message`).removeClass(`d-none`);
+   //    $(`#new-user-no-password-error`).removeClass(`d-none`);
    //    $(`#new-user-password`).addClass(`is-invalid`);
    // } else if (newUserPasswordLength < 9) {
    //    $(`#password-length-error-message`).removeClass(`d-none`);

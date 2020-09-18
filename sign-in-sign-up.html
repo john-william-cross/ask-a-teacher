@@ -103,14 +103,18 @@
                      Thanks for joining us!
                   </h1>
                   <p class="mt-2">Enter your school email</p>
-                  <input class="form-control form-control-lg" type="text" />
+                  <input
+                     id="new-user-email-input"
+                     class="form-control form-control-lg"
+                     type="text"
+                  />
                   <p id="new-user-no-email-error" class="d-none text-danger">
                      Please enter an email address
                   </p>
                   <p class="mt-2">Create a password</p>
                   <input
                      class="form-control form-control-lg"
-                     id="create-password-input"
+                     id="new-user-password-input"
                      type="text"
                      placeholder=""
                   />
@@ -131,10 +135,9 @@
                   <a
                      id="new-user-sign-up-button"
                      class="btn btn-outline-secondary logo-text-font lead sign-in mt-5 mb-9"
-                     href=""
+                     >Sign up</a
                   >
-                     Sign up
-                  </a>
+                  <!-- put href back into line 138 -->
                </div>
             </div>
          </div>
