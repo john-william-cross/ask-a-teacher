@@ -22,12 +22,40 @@ $(`#return-user-sign-in-button`).click(function (e) {
    const returnUserEmailLength = returnUserEmail.length;
    console.log(`length of return user email is: ${returnUserEmailLength}`);
    if (returnUserEmailLength === 0) {
-      $(`#no-email-error`).removeClass(`d-none`);
+      $(`#return-user-no-email-error`).removeClass(`d-none`);
       $(`#return-user-email-input`).addClass(`is-invalid`);
    } else {
-      $(`#no-email-error`).addClass(`d-none`);
+      $(`#return-user-no-email-error`).addClass(`d-none`);
       $(`#return-user-email-input`).removeClass(`is-invalid`);
    }
+   const returnUserPassword = $(`#return-user-password-input`).val();
+   const returnUserPasswordLength = returnUserPassword.length;
+
+   if (returnUserPasswordLength === 0) {
+      $(`#return-user-no-password-error`).removeClass(`d-none`);
+      $(`#return-user-password-input`).addClass(`is-invalid`);
+   } else if (returnUserPasswordLength < 8) {
+      $(`#return-user-password-length-error`).removeClass(`d-none`);
+      $(`#return-user-no-password-error`).addClass(`d-none`);
+      $(`#return-user-password-input`).addClass(`is-invalid`);
+   } else {
+      $(`#return-user-password-length-error`).addClass(`d-none`);
+      $(`#return-user-no-password-error`).addClass(`d-none`);
+      $(`#return-user-password-input`).removeClass(`is-invalid`);
+   }
+
+   // if (newUserPasswordLength === 0) {
+   //    $(`#missing-password-error-message`).removeClass(`d-none`);
+   //    $(`#new-user-password`).addClass(`is-invalid`);
+   // } else if (newUserPasswordLength < 9) {
+   //    $(`#password-length-error-message`).removeClass(`d-none`);
+   //    $(`#missing-password-error-message`).addClass(`d-none`);
+   //    $(`#new-user-password`).addClass(`is-invalid`);
+   // } else {
+   //    $(`#missing-password-error-message`).addClass(`d-none`);
+   //    $(`#password-length-error-message`).addClass(`d-none`);
+   //    $(`#new-user-password`).removeClass(`is-invalid`);
+   // }
 });
 
 $(`#question-input, #enter-email-input`).keyup(function (e) {

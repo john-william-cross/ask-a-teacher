@@ -52,30 +52,37 @@
                      type="text"
                      placeholder=""
                   />
-                  <p id="no-email-error" class="d-none text-danger">
+                  <p id="return-user-no-email-error" class="d-none text-danger">
                      Please enter an email address
                   </p>
                   <p class="mt-2">Password</p>
                   <input
                      class="form-control form-control-lg"
-                     id="password-input"
+                     id="return-user-password-input"
                      type="text"
                      placeholder=""
                   />
-                  <p id="no-password-error" class="text-danger">
+                  <p
+                     id="return-user-no-password-error"
+                     class="d-none text-danger"
+                  >
                      Please enter a password
                   </p>
-                  <!-- <p class="text-muted float-right">
-                     <span id="input-password-char-count">0</span>/8
-                  </p> -->
-
-                  <a
-                     id="return-user-sign-in-button"
-                     class="btn btn-outline-secondary logo-text-font lead sign-in mt-5"
+                  <p
+                     id="return-user-password-length-error"
+                     class="d-none text-danger"
                   >
-                     <!-- href="questions.html" put this back onto line 68 -->
-                     Sign in
-                  </a>
+                     Password must be at least 8 characters
+                  </p>
+                  <p class="text-muted">
+                     <a
+                        id="return-user-sign-in-button"
+                        class="btn btn-outline-secondary logo-text-font lead sign-in mt-5"
+                     >
+                        <!-- href="questions.html" put this back onto line 68 -->
+                        Sign in
+                     </a>
+                  </p>
                </div>
 
                <div class="text-center show-sign-up-info mt-6">
