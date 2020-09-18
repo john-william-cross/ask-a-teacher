@@ -104,6 +104,9 @@
                   </h1>
                   <p class="mt-2">Enter your school email</p>
                   <input class="form-control form-control-lg" type="text" />
+                  <p id="new-user-no-email-error" class="d-none text-danger">
+                     Please enter an email address
+                  </p>
                   <p class="mt-2">Create a password</p>
                   <input
                      class="form-control form-control-lg"
@@ -111,17 +114,26 @@
                      type="text"
                      placeholder=""
                   />
+                  <p id="new-user-no-password-error" class="d-none text-danger">
+                     Please enter a password
+                  </p>
+                  <p
+                     id="new-user-password-length-error"
+                     class="d-none text-danger"
+                  >
+                     Password must be at least 8 characters
+                  </p>
 
                   <!-- <p class="text-muted float-right">
                      <span id="create-password-char-count">0</span>/8
                   </p> -->
 
-                  <a href="questions.html">
-                     <p
-                        class="btn btn-outline-secondary logo-text-font lead sign-in mt-5 mb-9"
-                     >
-                        Sign up
-                     </p>
+                  <a
+                     id="new-user-sign-up-button"
+                     class="btn btn-outline-secondary logo-text-font lead sign-in mt-5 mb-9"
+                     href=""
+                  >
+                     Sign up
                   </a>
                </div>
             </div>
