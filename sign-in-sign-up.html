@@ -52,9 +52,9 @@
                      type="text"
                      placeholder=""
                   />
-                  <p id="return-user-no-email-error" class="d-none text-danger">
+                  <!-- <p id="email-error-message" class="d-none text-danger">
                      Please enter an email address
-                  </p>
+                  </p> -->
                   <p class="mt-2">Password</p>
                   <input
                      id="return-user-password-input"
@@ -62,26 +62,7 @@
                      type="text"
                      placeholder=""
                   />
-                  <p
-                     id="return-user-no-password-error"
-                     class="d-none text-danger"
-                  >
-                     Please enter a password
-                  </p>
-                  <p
-                     id="return-user-password-length-error"
-                     class="d-none text-danger"
-                  >
-                     Password must be at least 8 characters
-                  </p>
-
-                  <p
-                     class="text-danger d-none"
-                     id="reused-string-error-message"
-                  >
-                     You can't include all or part of your email address in your
-                     password!
-                  </p>
+                  <!-- <p id="password-error-message" class="d-none text-danger"></p> -->
 
                   <p class="text-muted">
                      <a
@@ -104,45 +85,26 @@
                   </h1>
                   <p class="mt-2">Enter your school email</p>
                   <input
-                     id="new-user-email-input"
+                     id="new-user-email"
                      class="form-control form-control-lg"
                      type="text"
                   />
-                  <p id="new-user-no-email-error" class="d-none text-danger">
+                  <p id="email-error-message" class="d-none text-danger">
                      Please enter an email address
                   </p>
                   <p class="mt-2">Create a password</p>
                   <input
                      class="form-control form-control-lg"
-                     id="new-user-password-input"
+                     id="new-user-password"
                      type="text"
                      placeholder=""
                   />
-                  <p id="new-user-no-password-error" class="d-none text-danger">
-                     Please enter a password
-                  </p>
-                  <p
-                     id="new-user-password-length-error"
-                     class="d-none text-danger"
-                  >
-                     Password must be at least 8 characters
-                  </p>
-                  <p
-                     class="text-danger d-none"
-                     id="new-user-reused-string-error-message"
-                  >
-                     You can't include all or part of your email address in your
-                     password!
-                  </p>
-
-                  <!-- <p class="text-muted float-right">
-                     <span id="create-password-char-count">0</span>/8
-                  </p> -->
+                  <p class="text-danger d-none" id="password-error-message"></p>
 
                   <a
-                     id="new-user-sign-up-button"
+                     id="lets-go-button"
                      class="btn btn-outline-secondary logo-text-font lead sign-in mt-5 mb-9"
-                     >Sign up</a
+                     >Let's go!</a
                   >
                   <!-- put href back into line 138 -->
                </div>
@@ -154,6 +116,8 @@
          src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
          defer
       ></script>
+      <script src="/secondMostInsecurePasswords.js" defer></script>
+      <script src="/mostInsecurePasswords.js" defer></script>
       <script src="/script.js" defer></script>
    </body>
 </html>
