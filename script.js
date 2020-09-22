@@ -1,9 +1,17 @@
+//**************************************//
+//--------Index Page JavaScript---------//
+//**************************************//
+
 $(".form-control").on("input", function () {
    // code below targets the id "overlay-sucess"; for toggleClass,
    // it means "if d-flex is on, turn it off; if d-none is on, turn it off"
    $(".question").toggleClass("d-none");
    $(".submit-new-question").toggleClass("d-none");
 });
+
+//**************************************//
+//----Sign-in-Sign-Up Page JavaScript---//
+//**************************************//
 
 $(".answer-a-question").click(function () {
    $(".sign-up-sign-in").toggleClass("d-flex d-none");
@@ -143,6 +151,10 @@ $(`#new-user-sign-up-button`).click(function (e) {
    }
 });
 
+//**************************************//
+//----Submit-Question Page JavaScript---//
+//**************************************//
+
 $(`#question-input, #enter-email-input`).keyup(function (e) {
    const questionText = $(`#question-input`).val();
    const emailText = $(`#enter-email-input`).val();
@@ -189,6 +201,10 @@ $(`#ask-a-teacher-submit-button`).click(function (e) {
       $(`#enter-email-notification`).removeClass(`d-none`);
    }
 });
+
+//**************************************//
+//-------Question Page JavaScript-------//
+//**************************************//
 
 $(`#answer-input`).keyup(function (e) {
    console.log(`Event: `, e);
