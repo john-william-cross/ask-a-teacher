@@ -9,13 +9,13 @@ $(".form-control").on("input", function () {
    $(".submit-new-question").toggleClass("d-none");
 });
 
-//**************************************//
-//----Sign-in-Sign-Up Page JavaScript---//
-//**************************************//
-
 $(".answer-a-question").click(function () {
    $(".sign-up-sign-in").toggleClass("d-flex d-none");
 });
+
+//**************************************//
+//----Sign-in-Sign-Up Page JavaScript---//
+//**************************************//
 
 $(".sign-up-prompt").click(function () {
    $(".return-user-sign-in").toggleClass("d-none");
@@ -23,78 +23,78 @@ $(".sign-up-prompt").click(function () {
    $(".email-and-create-password").toggleClass("d-none");
 });
 
-$(`#return-user-sign-in-button`).click(function (e) {
-   console.log(`you clicked on sign in!`);
-   const returnUserEmail = $(`#return-user-email-input`).val();
-   console.log(`value of return user email is: ${returnUserEmail}`);
-   const returnUserEmailLength = returnUserEmail.length;
-   console.log(`length of return user email is: ${returnUserEmailLength}`);
-   if (returnUserEmailLength === 0) {
-      $(`#return-user-no-email-error`).removeClass(`d-none`);
-      $(`#return-user-email-input`).addClass(`is-invalid`);
-   } else {
-      $(`#return-user-no-email-error`).addClass(`d-none`);
-      $(`#return-user-email-input`).removeClass(`is-invalid`);
-   }
-   const returnUserPassword = $(`#return-user-password-input`).val();
-   const returnUserPasswordLength = returnUserPassword.length;
+// $(`#return-user-sign-in-button`).click(function (e) {
+//    console.log(`you clicked on sign in!`);
+//    const returnUserEmail = $(`#return-user-email-input`).val();
+//    console.log(`value of return user email is: ${returnUserEmail}`);
+//    const returnUserEmailLength = returnUserEmail.length;
+//    console.log(`length of return user email is: ${returnUserEmailLength}`);
+//    if (returnUserEmailLength === 0) {
+//       $(`#return-user-no-email-error`).removeClass(`d-none`);
+//       $(`#return-user-email-input`).addClass(`is-invalid`);
+//    } else {
+//       $(`#return-user-no-email-error`).addClass(`d-none`);
+//       $(`#return-user-email-input`).removeClass(`is-invalid`);
+//    }
+//    const returnUserPassword = $(`#return-user-password-input`).val();
+//    const returnUserPasswordLength = returnUserPassword.length;
 
-   if (returnUserPasswordLength === 0) {
-      $(`#return-user-password-input`).addClass(`is-invalid`);
-      $(`#return-user-no-password-error`).removeClass(`d-none`);
-      $(`#return-user-password-length-error`).addClass(`d-none`);
-   } else if (returnUserPasswordLength < 8) {
-      $(`#return-user-password-length-error`).removeClass(`d-none`);
-      $(`#return-user-no-password-error`).addClass(`d-none`);
-      $(`#return-user-password-input`).addClass(`is-invalid`);
-   } else {
-      $(`#return-user-password-length-error`).addClass(`d-none`);
-      $(`#return-user-no-password-error`).addClass(`d-none`);
-      $(`#return-user-password-input`).removeClass(`is-invalid`);
-   }
+//    if (returnUserPasswordLength === 0) {
+//       $(`#return-user-password-input`).addClass(`is-invalid`);
+//       $(`#return-user-no-password-error`).removeClass(`d-none`);
+//       $(`#return-user-password-length-error`).addClass(`d-none`);
+//    } else if (returnUserPasswordLength < 8) {
+//       $(`#return-user-password-length-error`).removeClass(`d-none`);
+//       $(`#return-user-no-password-error`).addClass(`d-none`);
+//       $(`#return-user-password-input`).addClass(`is-invalid`);
+//    } else {
+//       $(`#return-user-password-length-error`).addClass(`d-none`);
+//       $(`#return-user-no-password-error`).addClass(`d-none`);
+//       $(`#return-user-password-input`).removeClass(`is-invalid`);
+//    }
 
-   trimmedReturnUserEmail = returnUserEmail.trim();
-   console.log(`Returning user email address is ${returnUserEmail}`);
-   console.log(`Trimmed new user email address is ${trimmedReturnUserEmail}.`);
+//    trimmedReturnUserEmail = returnUserEmail.trim();
+//    console.log(`Returning user email address is ${returnUserEmail}`);
+//    console.log(`Trimmed new user email address is ${trimmedReturnUserEmail}.`);
 
-   const delimiter = `@`;
-   const indexofAtSymbolDelimiter = trimmedReturnUserEmail.indexOf(delimiter);
-   console.log(
-      `the @ symbol in the trimmed return user email is at index: ${indexofAtSymbolDelimiter}`
-   );
+//    const delimiter = `@`;
+//    const indexofAtSymbolDelimiter = trimmedReturnUserEmail.indexOf(delimiter);
+//    console.log(
+//       `the @ symbol in the trimmed return user email is at index: ${indexofAtSymbolDelimiter}`
+//    );
 
-   const localPartTrimmedReturnUserEmail = trimmedReturnUserEmail.slice(
-      0,
-      indexofAtSymbolDelimiter
-   );
-   console.log(
-      `the local part of the trimmed return user email is ${localPartTrimmedReturnUserEmail}`
-   );
+//    const localPartTrimmedReturnUserEmail = trimmedReturnUserEmail.slice(
+//       0,
+//       indexofAtSymbolDelimiter
+//    );
+//    console.log(
+//       `the local part of the trimmed return user email is ${localPartTrimmedReturnUserEmail}`
+//    );
 
-   console.log(
-      `the length of the local part trimmed return user email is: ${localPartTrimmedReturnUserEmail.length}.`
-   );
+//    console.log(
+//       `the length of the local part trimmed return user email is: ${localPartTrimmedReturnUserEmail.length}.`
+//    );
 
-   const localPartTrimmedReturnUserEmailLength =
-      localPartTrimmedReturnUserEmail.length;
+//    const localPartTrimmedReturnUserEmailLength =
+//       localPartTrimmedReturnUserEmail.length;
 
-   if (
-      returnUserPassword.includes(localPartTrimmedReturnUserEmail) &&
-      localPartTrimmedReturnUserEmailLength >= 4
-   ) {
-      console.log(
-         `The password ${returnUserPassword} includes the string ${localPartTrimmedReturnUserEmail}, so it can't be used!`
-      );
-      $(`#reused-string-error-message`).removeClass(`d-none`);
-      $(`#return-user-password-input`).addClass(`is-invalid`);
-   } else {
-      console.log(
-         `the return user password does not contain the string: ${localPartTrimmedReturnUserEmail}. Good on you, return user.`
-      );
-      $(`#reused-string-error-message`).addClass(`d-none`);
-      $(`#return-user-password-input`).removeClass(`is-invalid`);
-   }
-});
+//    if (
+//       returnUserPassword.includes(localPartTrimmedReturnUserEmail) &&
+//       localPartTrimmedReturnUserEmailLength >= 4
+//    ) {
+//       console.log(
+//          `The password ${returnUserPassword} includes the string ${localPartTrimmedReturnUserEmail}, so it can't be used!`
+//       );
+//       $(`#reused-string-error-message`).removeClass(`d-none`);
+//       $(`#return-user-password-input`).addClass(`is-invalid`);
+//    } else {
+//       console.log(
+//          `the return user password does not contain the string: ${localPartTrimmedReturnUserEmail}. Good on you, return user.`
+//       );
+//       $(`#reused-string-error-message`).addClass(`d-none`);
+//       $(`#return-user-password-input`).removeClass(`is-invalid`);
+//    }
+// });
 
 $(`#new-user-sign-up-button`).click(function (e) {
    console.log("you clicked on sign up!");
