@@ -326,6 +326,49 @@ $("#lets-go-button").click(function (e) {
 });
 
 //**************************************//
+//----Submit Question Page JavaScript---//
+//**************************************//
+
+$(`#question-input`).keyup(function (e) {
+   console.log(`Event: `, e);
+
+   const text = e.target.value;
+   const username = `John`;
+   console.log(`${username} inputted: ${text}`);
+
+   const textLength = text.length;
+
+   console.log(`Total inputted chars: ${textLength}`);
+
+   $(`#question-input-char-count`).html(textLength);
+
+   if (textLength > 0 && textLength < 501) {
+      console.log(`text was entered`);
+      $(`#ask-a-teacher-submit-button`).removeAttr(`disabled`);
+      $(`#question-input-char-count`).removeClass(`text-danger`);
+      $(`#question-input-char-count`).addClass(`text-muted`);
+   }
+   if (textLength > 500 || textLength === 0) {
+      console.log(`not enough or too many characters`);
+      $(`#ask-a-teacher-submit-button`).attr(`disabled`, `disabled`);
+      $(`#question-input-char-count`).removeClass(`text-muted`);
+      $(`#question-input-char-count`).addClass(`text-danger`);
+   }
+});
+
+$(`#ask-a-teacher-submit-button`).click(function () {
+   const emailEntered = $(`#questioner-email-input`).val();
+   console.log(emailEntered);
+   if (emailEntered.length === 0) {
+      $(`#questioner-enter-email-notification`).removeClass(`d-none`);
+      $(`#questioner-email-input`).addClass(`is-invalid`);
+   } else {
+      $(`#questioner-enter-email-notification`).addClass(`d-none`);
+      $(`#questioner-email-input`).removeClass(`is-invalid`);
+   }
+});
+
+//**************************************//
 //-------Question Page JavaScript-------//
 //**************************************//
 
