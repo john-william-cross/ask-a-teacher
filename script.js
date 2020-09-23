@@ -2,16 +2,16 @@
 //--------Index Page JavaScript---------//
 //**************************************//
 
-// $(".form-control").on("input", function () {
-//    // code below targets the id "overlay-sucess"; for toggleClass,
-//    // it means "if d-flex is on, turn it off; if d-none is on, turn it off"
-//    $(".question").toggleClass("d-none");
-//    $(".submit-new-question").toggleClass("d-none");
-// });
+$(".form-control").on("input", function () {
+   // code below targets the id "overlay-sucess"; for toggleClass,
+   // it means "if d-flex is on, turn it off; if d-none is on, turn it off"
+   $(".question").toggleClass("d-none");
+   $(".submit-new-question").toggleClass("d-none");
+});
 
-// $(".answer-a-question").click(function () {
-//    $(".sign-up-sign-in").toggleClass("d-flex d-none");
-// });
+$(".answer-a-question").click(function () {
+   $(".sign-up-sign-in").toggleClass("d-flex d-none");
+});
 
 //**************************************//
 //----Sign-in-Sign-Up Page JavaScript---//
@@ -329,29 +329,29 @@ $("#lets-go-button").click(function (e) {
 //-------Question Page JavaScript-------//
 //**************************************//
 
-// $(`#answer-input`).keyup(function (e) {
-//    console.log(`Event: `, e);
+$(`#answer-input`).keyup(function (e) {
+   console.log(`Event: `, e);
 
-//    const text = e.target.value;
-//    const username = `John`;
-//    console.log(`${username} inputted: ${text}`);
+   const text = e.target.value;
+   const username = `John`;
+   console.log(`${username} inputted: ${text}`);
 
-//    const textLength = text.length;
+   const textLength = text.length;
 
-//    console.log(`Total inputted chars: ${textLength}`);
+   console.log(`Total inputted chars: ${textLength}`);
 
-//    $(`#answer-input-char-count`).html(textLength);
+   $(`#answer-input-char-count`).html(textLength);
 
-//    if (textLength > 0 && textLength < 2001) {
-//       console.log(`text was entered`);
-//       $(`#submit-answer`).removeAttr(`disabled`);
-//       $(`#answer-input-char-count`).removeClass(`text-danger`);
-//       $(`#answer-input-char-count`).addClass(`text-muted`);
-//    }
-//    if (textLength > 2000 || textLength === 0) {
-//       console.log(`not enough or too many characters`);
-//       $(`#submit-answer`).attr(`disabled`, `disabled`);
-//       $(`#answer-input-char-count`).removeClass(`text-muted`);
-//       $(`#answer-input-char-count`).addClass(`text-danger`);
-//    }
-// });
+   if (textLength > 0 && textLength < 2001) {
+      console.log(`text was entered`);
+      $(`#submit-answer`).removeAttr(`disabled`);
+      $(`#answer-input-char-count`).removeClass(`text-danger`);
+      $(`#answer-input-char-count`).addClass(`text-muted`);
+   }
+   if (textLength > 2000 || textLength === 0) {
+      console.log(`not enough or too many characters`);
+      $(`#submit-answer`).attr(`disabled`, `disabled`);
+      $(`#answer-input-char-count`).removeClass(`text-muted`);
+      $(`#answer-input-char-count`).addClass(`text-danger`);
+   }
+});
