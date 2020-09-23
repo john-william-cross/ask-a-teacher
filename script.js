@@ -96,7 +96,7 @@ $(".sign-up-prompt").click(function () {
 //    }
 // });
 
-$(`#lets-go-button`).click(function (e) {
+$("#lets-go-button").click(function (e) {
    const newUserEmailAddress = $(`#new-user-email`).val();
    const newUserEmailAddressLength = newUserEmailAddress.length;
    // console.log(`val is ${newUserEmailAddress}`);
@@ -105,28 +105,13 @@ $(`#lets-go-button`).click(function (e) {
    // );
 
    const newUserPassword = $(`#new-user-password`).val();
-   // console.log(`password length is ${newUserPassword.length}`);
+   console.log(`new user password: `, newUserPassword);
 
    trimmedNewUserEmailAddress = newUserEmailAddress.trim();
-   //console.log(trimmedNewUserEmailAddress);
-   // console.log(`New user email address is ${newUserEmailAddress}`);
-   // console.log(
-   //    `Trimmed new user email address is ${trimmedNewUserEmailAddress}.`
-   // );
 
-   const localPartTrimmedNewUserEmail = trimmedNewUserEmailAddress.split(`@`);
-   //console.log(localPartTrimmedNewUserEmail);
-   trimmedNewUserEmailAddress = localPartTrimmedNewUserEmail.slice(0, 1);
+   const partsOfTrimmedNewUserEmail = trimmedNewUserEmailAddress.split(`@`);
 
-   console.log(
-      `the local part of the trimmed new user email is ${trimmedNewUserEmailAddress}`
-   );
-
-   // console.log(
-   //    `length of the localparttrimmed new user email is: ${localPartTrimmedNewUserEmail.length}`
-   // );
-   const localPartTrimmedNewUserEmailLength =
-      localPartTrimmedNewUserEmail.length;
+   const localPartTrimmedNewUserEmail = partsOfTrimmedNewUserEmail[0];
 
    const unacceptablePasswordsLists = mostInsecurePasswords.concat(
       secondMostInsecurePasswords
@@ -251,30 +236,36 @@ $(`#lets-go-button`).click(function (e) {
       unacceptablePasswords
    );
 
-   const clickedOn = new Date();
-   const year = clickedOn.getFullYear();
+   let clickedAt = new Date();
+   // clickedAt = new Date(2020, 1, 7); //uncomment to test
+   const year = clickedAt.getFullYear();
    //console.log(year);
-   const month = clickedOn.getMonth();
+   const month = clickedAt.getMonth();
 
-   if (month < 12) {
-      monthPlusOne = month + 1;
-      //console.log(monthPlusOne);
-   }
+   const monthPlusOne = month + 1;
+   //console.log(monthPlusOne);
 
-   const day = clickedOn.getDate();
+   const day = clickedAt.getDate();
+
    //console.log(day);
 
-   yearToString = year.toString();
-   monthToString = monthPlusOne.toString();
+   const dayToString = String(day);
+   const yearToString = String(year);
+   const monthToString = String(monthPlusOne);
    //console.log(monthToString);
-   dayToString = day.toString();
 
-   if (monthToString < 10) {
-      monthToString = 0 + monthToString;
+   let paddedDay = dayToString;
+   if (dayToString < 10) {
+      paddedDay = 0 + dayToString;
    }
 
-   const fullDate = yearToString + monthToString + dayToString;
-   fulldate = parseInt(fullDate);
+   let paddedMonth = monthToString;
+   if (monthToString < 10) {
+      paddedMonth = 0 + monthToString;
+   }
+
+   const fullDate = yearToString + paddedMonth + paddedDay;
+   fulldate = Number(fullDate);
    const createdAt = fullDate;
    console.log(`The date is\n`, createdAt);
 
@@ -285,11 +276,19 @@ $(`#lets-go-button`).click(function (e) {
       $(`#email-error-message`).addClass(`d-none`);
       $(`#new-user-email`).removeClass(`is-invalid`);
    }
+
    const passwordEmptyError = `Please create a password.`;
    const passwordLengthError = `Your password must be at least 9 characters.`;
    const passwordContainsEmailCharsError = `All or part of your email address cannot be in your password.`;
    const passwordMostInsecurePasswordsError = `Your password contains a commonly used password, "${newUserPassword}" and can be easily discovered by attackers. Please use something else.`;
+
    const lowerCasedPassword = newUserPassword.toLowerCase();
+
+   console.log(
+      `here is the local part trimmed email address:\n ${localPartTrimmedNewUserEmail}`
+   );
+   console.log(`here is the lower cased password:\n`, lowerCasedPassword);
+
    if (lowerCasedPassword.length === 0) {
       $(`#password-error-message`).removeClass(`d-none`);
       $(`#new-user-password`).addClass(`is-invalid`);
@@ -300,7 +299,7 @@ $(`#lets-go-button`).click(function (e) {
       $(`#password-error-message`).html(passwordLengthError);
    } else if (
       lowerCasedPassword.includes(localPartTrimmedNewUserEmail) &&
-      localPartTrimmedNewUserEmailLength >= 4
+      localPartTrimmedNewUserEmail.length >= 4 //still only checks for all of email, not part of it...?
    ) {
       $(`#password-error-message`).removeClass(`d-none`);
       $(`#new-user-password`).addClass(`is-invalid`);
