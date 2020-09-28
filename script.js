@@ -51,7 +51,7 @@ $("#lets-go-button").click(function (e) {
    } else {
       hideError(`#sign-up-email`, emailError);
    }
-   console.log(`The date is\n`, getCreatedAt());
+   console.log(`The date is:`, getCreatedAt());
 });
 
 //**************************************//
