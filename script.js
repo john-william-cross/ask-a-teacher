@@ -23,306 +23,28 @@ $(".sign-up-prompt").click(function () {
    $(".email-and-create-password").toggleClass("d-none");
 });
 
-// $(`#return-user-sign-in-button`).click(function (e) {
-//    console.log(`you clicked on sign in!`);
-//    const returnUserEmail = $(`#return-user-email-input`).val();
-//    console.log(`value of return user email is: ${returnUserEmail}`);
-//    const returnUserEmailLength = returnUserEmail.length;
-//    console.log(`length of return user email is: ${returnUserEmailLength}`);
-//    if (returnUserEmailLength === 0) {
-//       $(`#return-user-no-email-error`).removeClass(`d-none`);
-//       $(`#return-user-email-input`).addClass(`is-invalid`);
-//    } else {
-//       $(`#return-user-no-email-error`).addClass(`d-none`);
-//       $(`#return-user-email-input`).removeClass(`is-invalid`);
-//    }
-//    const returnUserPassword = $(`#return-user-password-input`).val();
-//    const returnUserPasswordLength = returnUserPassword.length;
-
-//    if (returnUserPasswordLength === 0) {
-//       $(`#return-user-password-input`).addClass(`is-invalid`);
-//       $(`#return-user-no-password-error`).removeClass(`d-none`);
-//       $(`#return-user-password-length-error`).addClass(`d-none`);
-//    } else if (returnUserPasswordLength < 8) {
-//       $(`#return-user-password-length-error`).removeClass(`d-none`);
-//       $(`#return-user-no-password-error`).addClass(`d-none`);
-//       $(`#return-user-password-input`).addClass(`is-invalid`);
-//    } else {
-//       $(`#return-user-password-length-error`).addClass(`d-none`);
-//       $(`#return-user-no-password-error`).addClass(`d-none`);
-//       $(`#return-user-password-input`).removeClass(`is-invalid`);
-//    }
-
-//    trimmedReturnUserEmail = returnUserEmail.trim();
-//    console.log(`Returning user email address is ${returnUserEmail}`);
-//    console.log(`Trimmed new user email address is ${trimmedReturnUserEmail}.`);
-
-//    const delimiter = `@`;
-//    const indexofAtSymbolDelimiter = trimmedReturnUserEmail.indexOf(delimiter);
-//    console.log(
-//       `the @ symbol in the trimmed return user email is at index: ${indexofAtSymbolDelimiter}`
-//    );
-
-//    const localPartTrimmedReturnUserEmail = trimmedReturnUserEmail.slice(
-//       0,
-//       indexofAtSymbolDelimiter
-//    );
-//    console.log(
-//       `the local part of the trimmed return user email is ${localPartTrimmedReturnUserEmail}`
-//    );
-
-//    console.log(
-//       `the length of the local part trimmed return user email is: ${localPartTrimmedReturnUserEmail.length}.`
-//    );
-
-//    const localPartTrimmedReturnUserEmailLength =
-//       localPartTrimmedReturnUserEmail.length;
-
-//    if (
-//       returnUserPassword.includes(localPartTrimmedReturnUserEmail) &&
-//       localPartTrimmedReturnUserEmailLength >= 4
-//    ) {
-//       console.log(
-//          `The password ${returnUserPassword} includes the string ${localPartTrimmedReturnUserEmail}, so it can't be used!`
-//       );
-//       $(`#reused-string-error-message`).removeClass(`d-none`);
-//       $(`#return-user-password-input`).addClass(`is-invalid`);
-//    } else {
-//       console.log(
-//          `the return user password does not contain the string: ${localPartTrimmedReturnUserEmail}. Good on you, return user.`
-//       );
-//       $(`#reused-string-error-message`).addClass(`d-none`);
-//       $(`#return-user-password-input`).removeClass(`is-invalid`);
-//    }
-// });
-
 $("#lets-go-button").click(function (e) {
-   const newUserEmailAddress = $(`#new-user-email`).val();
-   const newUserEmailAddressLength = newUserEmailAddress.length;
-   // console.log(`val is ${newUserEmailAddress}`);
-   // console.log(
-   //    `new user email address length is: ${newUserEmailAddressLength}`
-   // );
+   const emailInput = $(`#sign-up-email-input`).val();
+   const email = emailInput.trim().toLowerCase();
+   const password = $(`#sign-up-password-input`).val();
 
-   const newUserPassword = $(`#new-user-password`).val();
-   console.log(`new user password: `, newUserPassword);
+   const passwordError = getPasswordError(password, email); // getPasswordError should return a string
 
-   trimmedNewUserEmailAddress = newUserEmailAddress.trim();
-
-   const partsOfTrimmedNewUserEmail = trimmedNewUserEmailAddress.split(`@`);
-
-   const localPartTrimmedNewUserEmail = partsOfTrimmedNewUserEmail[0];
-
-   const unacceptablePasswordsLists = mostInsecurePasswords.concat(
-      secondMostInsecurePasswords
-   );
-
-   const flattenedUnacceptablePasswordsLists = unacceptablePasswordsLists.flat();
-   // console.log(
-   //    `flatted unacceptable passwords:\n`,
-   //    flattenedUnacceptablePasswords
-   // );
-
-   const allUniqUnacceptablePasswords = [
-      ...new Set(flattenedUnacceptablePasswordsLists),
-   ];
-   // console.log(
-   //    `Here's a list of all unique unacceptable passwords:\n`,
-   //    allUniqUnacceptablePasswords
-   // );
-
-   const firstUniqPasswords = allUniqUnacceptablePasswords.slice(
-      0,
-      allUniqUnacceptablePasswords.indexOf(`skywalker`)
-   );
-
-   // console.log(
-   //    `here is the first part of the unique passwords:\n`,
-   //    firstUniqPasswords
-   // );
-
-   const secondUniqPasswords = allUniqUnacceptablePasswords.slice(
-      4,
-      allUniqUnacceptablePasswords.indexOf(`obama2016`)
-   );
-   // console.log(
-   //    `here is the second part of the unique passwords:\n`,
-   //    secondUniqPasswords
-   // );
-
-   const thirdUniqPasswords = allUniqUnacceptablePasswords.slice(7);
-   // console.log(
-   //    `here is the third part of the unique passwords:\n`,
-   //    thirdUniqPasswords
-   // );
-
-   allCleanedUpUniqPasswords = firstUniqPasswords.concat(
-      secondUniqPasswords,
-      thirdUniqPasswords
-   );
-
-   // console.log(
-   //    `Here are all the cleaned-up unique passwords:\n`,
-   //    allCleanedUpUniqPasswords
-   // );
-
-   const unacceptablePasswordsWithBoolsAndNums = allCleanedUpUniqPasswords;
-   let unacceptablePasswordsWithNums = [];
-   for (let i = 0; i < unacceptablePasswordsWithBoolsAndNums.length; i++) {
-      // console.log(unacceptablePasswordsWithBoolsAndNums[i]);
-
-      const password = unacceptablePasswordsWithBoolsAndNums[i];
-
-      if (typeof password !== "boolean") {
-         unacceptablePasswordsWithNums = unacceptablePasswordsWithNums.concat([
-            unacceptablePasswordsWithBoolsAndNums[i],
-         ]);
-      }
-   }
-
-   // console.log(
-   //    `Here are the passwords made up of strings and numbers:\n`,
-   //    unacceptablePasswordsWithNums
-   // );
-
-   let unacceptablePasswordStrings = [];
-   for (let i = 0; i < unacceptablePasswordsWithNums.length; i++) {
-      const value = unacceptablePasswordsWithNums[i];
-      unacceptablePasswordStrings = unacceptablePasswordStrings.concat(
-         String(value)
-      );
-   }
-   //console.log(`here are the old passwords:\n`, unacceptablePasswordStrings);
-
-   let unacceptablePasswordsForwardAndReversed = [];
-   //creates empty array
-   for (i = 0; i < unacceptablePasswordStrings.length; i++) {
-      //keep doing the following until i < unacceptablePasswordStrings.length
-      let passwordChars = unacceptablePasswordStrings[i].split(``);
-      //splits each word in oldUnacccetablePasswords list and assigns it to passwordChars
-      ///console.log(`Split password chars:\n`, passwordChars);
-      const copyOfPasswordChars = [...passwordChars];
-      //makes a copy of passwordChars
-      //console.log(`copy of password chars:\n`, copyOfPasswordChars);
-      const reversePasswordChars = copyOfPasswordChars.reverse();
-      //reverses each split password
-      //console.log(`Reversed password chars:\n`, reversePasswordChars);
-      const reversedUnacceptablePasswords = reversePasswordChars.join(``);
-      //joins (un-splits) each reverse password back together
-      //console.log(reversedUnacceptablePasswords);
-      unacceptablePasswordsForwardAndReversed = unacceptablePasswordsForwardAndReversed.concat(
-         reversedUnacceptablePasswords
-      ); //fills empty array with reversedUnacceptablePasswords
-   }
-   let forwardAndReversedPasswords = unacceptablePasswordStrings.concat(
-      unacceptablePasswordsForwardAndReversed
-   ); //combines forward passwords array with reverse passwords array into a new array called
-   //forwardAndReversedPasswords
-   // console.log(
-   //    `Here's the new list of unacceptable passwords in forward and reverse order:\n`,
-   //    forwardAndReversedPasswords
-   // );
-
-   let normalizedPasswords = [];
-   for (let i = 0; i < forwardAndReversedPasswords.length; i++) {
-      const password = forwardAndReversedPasswords[i];
-      const lowerCasedPassword = password.toLowerCase();
-      normalizedPasswords = normalizedPasswords.concat(lowerCasedPassword);
-   }
-   //console.log(`Here are the normalized passwords:\n`, normalizedPasswords);
-   let unacceptablePasswords = [...new Set(normalizedPasswords)];
-   console.log(
-      `Here are the unacceptable passwords, all of which are unique and normalized\n`,
-      unacceptablePasswords
-   );
-
-   let clickedAt = new Date();
-   // clickedAt = new Date(2020, 1, 7); //uncomment to test
-   const year = clickedAt.getFullYear();
-   //console.log(year);
-   const month = clickedAt.getMonth();
-
-   const monthPlusOne = month + 1;
-   //console.log(monthPlusOne);
-
-   const day = clickedAt.getDate();
-
-   //console.log(day);
-
-   const dayToString = String(day);
-   const yearToString = String(year);
-   const monthToString = String(monthPlusOne);
-   //console.log(monthToString);
-
-   let paddedDay = dayToString;
-   if (dayToString < 10) {
-      paddedDay = 0 + dayToString;
-   }
-
-   let paddedMonth = monthToString;
-   if (monthToString < 10) {
-      paddedMonth = 0 + monthToString;
-   }
-
-   const fullDate = yearToString + paddedMonth + paddedDay;
-   fulldate = Number(fullDate);
-   const createdAt = fullDate;
-   console.log(`The date is\n`, createdAt);
-
-   if (newUserEmailAddressLength === 0) {
-      $(`#email-error-message`).removeClass(`d-none`);
-      $(`#new-user-email`).addClass(`is-invalid`);
-   } else if (newUserEmailAddressLength > 0) {
-      $(`#email-error-message`).addClass(`d-none`);
-      $(`#new-user-email`).removeClass(`is-invalid`);
-   }
-
-   const passwordEmptyError = `Please create a password.`;
-   const passwordLengthError = `Your password must be at least 9 characters.`;
-   const passwordContainsEmailCharsError = `All or part of your email address cannot be in your password.`;
-   const passwordMostInsecurePasswordsError = `Your password contains a commonly used password, "${newUserPassword}" and can be easily discovered by attackers. Please use something else.`;
-
-   const lowerCasedPassword = newUserPassword.toLowerCase();
-
-   console.log(
-      `here is the local part trimmed email address:\n ${localPartTrimmedNewUserEmail}`
-   );
-   console.log(`here is the lower cased password:\n`, lowerCasedPassword);
-
-   // console.log(
-   //    `lowercased password includes email: `,
-   //    lowerCasedPassword.includes(localPartTrimmedNewUserEmail)
-   // );
-
-   // console.log(
-   //    `both things are met?`,
-   //    lowerCasedPassword.includes(localPartTrimmedNewUserEmail) &&
-   //       localPartTrimmedNewUserEmail.length >= 4
-   // );
-
-   if (lowerCasedPassword.length === 0) {
-      $(`#password-error-message`).removeClass(`d-none`);
-      $(`#new-user-password`).addClass(`is-invalid`);
-      $(`#password-error-message`).html(passwordEmptyError);
-   } else if (lowerCasedPassword.length < 9) {
-      $(`#password-error-message`).removeClass(`d-none`);
-      $(`#new-user-password`).addClass(`is-invalid`);
-      $(`#password-error-message`).html(passwordLengthError);
-   } else if (
-      lowerCasedPassword.includes(localPartTrimmedNewUserEmail) &&
-      localPartTrimmedNewUserEmail.length >= 4 //still only checks for all of email, not part of it...?
-   ) {
-      $(`#password-error-message`).removeClass(`d-none`);
-      $(`#new-user-password`).addClass(`is-invalid`);
-      $(`#password-error-message`).html(passwordContainsEmailCharsError);
-   } else if (unacceptablePasswords.includes(lowerCasedPassword)) {
-      $(`#password-error-message`).removeClass(`d-none`);
-      $(`#password-error-message`).html(passwordMostInsecurePasswordsError);
-      $(`#new-user-password`).addClass(`is-invalid`);
+   if (passwordError !== ``) {
+      showError(`#sign-up-password`, passwordError);
    } else {
-      $(`#password-error-message`).addClass(`d-none`);
-      $(`#new-user-password`).removeClass(`is-invalid`);
+      hideError(`#sign-up-password`, passwordError);
    }
+
+   const emailError = getEmailError(email);
+   console.log(`this is the email error`, emailError);
+
+   if (emailError !== ``) {
+      showError(`#sign-up-email`, emailError);
+   } else {
+      hideError(`#sign-up-email`, emailError);
+   }
+   console.log(`The date is\n`, getCreatedAt());
 });
 
 //**************************************//
@@ -398,3 +120,63 @@ $(`#answer-input`).keyup(function (e) {
       $(`#answer-input-char-count`).addClass(`text-danger`);
    }
 });
+
+function showError(element, message) {
+   $(`${element}-input`).addClass(`is-invalid`);
+   $(`${element}-error`).html(message);
+}
+
+function hideError(element, message) {
+   $(`${element}-input`).removeClass(`is-invalid`);
+   $(`${element}-error`).html(message);
+}
+
+function getCreatedAt() {
+   let clickedAt = new Date();
+   // clickedAt = new Date(2020, 0, 1); //uncomment to test
+   const year = clickedAt.getFullYear();
+   const month = clickedAt.getMonth();
+   const day = clickedAt.getDate();
+   const monthPlusOne = month + 1;
+   const dayToString = String(day);
+   const yearToString = String(year);
+   const monthToString = String(monthPlusOne);
+   createdAt = Number(
+      yearToString + padLeft(monthToString) + padLeft(dayToString)
+   );
+   return createdAt;
+}
+
+function padLeft(string) {
+   if (string < 10) {
+      string = 0 + string;
+   }
+   return string;
+}
+
+function showCharCountValidation(id, input) {
+   $(id).html(input.length);
+
+   if (input.length <= maxCharCardInput) {
+      $(id).removeClass(`text-danger`);
+   } else {
+      $(id).addClass(`text-danger`);
+   }
+
+   toggleDisabled();
+}
+
+function toggleDisabled() {
+   const topText = $(`#edit-input-top-card`).val();
+   const bottomText = $(`#edit-input-bottom-card`).val();
+   if (
+      topText.length > 0 &&
+      topText.length <= maxCharCardInput &&
+      bottomText.length > 0 &&
+      bottomText.length <= maxCharCardInput
+   ) {
+      $(`#save-card`).removeClass(`disabled`);
+   } else {
+      $(`#save-card`).addClass(`disabled`);
+   }
+}

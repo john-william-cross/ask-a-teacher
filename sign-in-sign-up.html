@@ -86,21 +86,19 @@
                   </h1>
                   <p class="mt-2">Enter your school email</p>
                   <input
-                     id="new-user-email"
+                     id="sign-up-email-input"
                      class="form-control form-control-lg"
                      type="text"
                   />
-                  <p id="email-error-message" class="d-none text-danger">
-                     Please enter an email address
-                  </p>
+                  <p class="text-danger mb-4" id="sign-up-email-error"></p>
                   <p class="mt-2">Create a password</p>
                   <input
                      class="form-control form-control-lg"
-                     id="new-user-password"
+                     id="sign-up-password-input"
                      type="password"
                      placeholder=""
                   />
-                  <p class="text-danger d-none" id="password-error-message"></p>
+                  <p class="text-danger" id="sign-up-password-error"></p>
 
                   <a
                      id="lets-go-button"
@@ -118,6 +116,8 @@
       ></script>
       <script src="/secondMostInsecurePasswords.js" defer></script>
       <script src="/mostInsecurePasswords.js" defer></script>
+      <script src="/getEmailError.js" defer></script>
+      <script src="/getPasswordError.js" defer></script>
       <script src="/script.js" defer></script>
    </body>
 </html>
