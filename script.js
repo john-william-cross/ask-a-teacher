@@ -154,30 +154,3 @@ function padLeft(string) {
    }
    return string;
 }
-
-function showCharCountValidation(id, input) {
-   $(id).html(input.length);
-
-   if (input.length <= maxCharCardInput) {
-      $(id).removeClass(`text-danger`);
-   } else {
-      $(id).addClass(`text-danger`);
-   }
-
-   toggleDisabled();
-}
-
-function toggleDisabled() {
-   const topText = $(`#edit-input-top-card`).val();
-   const bottomText = $(`#edit-input-bottom-card`).val();
-   if (
-      topText.length > 0 &&
-      topText.length <= maxCharCardInput &&
-      bottomText.length > 0 &&
-      bottomText.length <= maxCharCardInput
-   ) {
-      $(`#save-card`).removeClass(`disabled`);
-   } else {
-      $(`#save-card`).addClass(`disabled`);
-   }
-}
