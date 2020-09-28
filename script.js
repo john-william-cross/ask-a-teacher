@@ -96,31 +96,60 @@ $(`#ask-a-teacher-submit-button`).click(function () {
 //**************************************//
 //-------Question Page JavaScript-------//
 //**************************************//
+const maxCharCardInput = 2000;
+// $(`#answer-input`).keyup(function (e) {
 
 $(`#answer-input`).keyup(function (e) {
-   const text = e.target.value;
+   showCharCountValidation(
+      `#answer-input-char-count`,
+      $(`#answer-input`).val()
+   );
 
-   const textLength = text.length;
+   // const text = e.target.value;
 
-   console.log(`Total inputted chars: ${textLength}`);
+   // const textLength = text.length;
 
-   $(`#answer-input-char-count`).html(textLength);
+   // console.log(`Total inputted chars: ${textLength}`);
 
-   if (textLength > 0 && textLength < 2001) {
-      $(`#submit-answer`).removeAttr(`disabled`);
-      $(`#answer-input-char-count`).removeClass(`text-danger`);
-      $(`#answer-input-char-count`).addClass(`text-muted`);
-   }
-   if (textLength > 2000 || textLength === 0) {
-      $(`#submit-answer`).attr(`disabled`, `disabled`);
-      $(`#answer-input-char-count`).removeClass(`text-muted`);
-      $(`#answer-input-char-count`).addClass(`text-danger`);
-   }
+   // $(`#answer-input-char-count`).html(textLength);
+
+   // if (textLength > 0 && textLength < 2001) {
+   //    $(`#submit-answer`).removeAttr(`disabled`);
+   //    $(`#answer-input-char-count`).removeClass(`text-danger`);
+   //    $(`#answer-input-char-count`).addClass(`text-muted`);
+   // }
+   // if (textLength > 2000 || textLength === 0) {
+   //    $(`#submit-answer`).attr(`disabled`, `disabled`);
+   //    $(`#answer-input-char-count`).removeClass(`text-muted`);
+   //    $(`#answer-input-char-count`).addClass(`text-danger`);
+   // }
 });
 
 //**************************************//
 //--------------FUNCTIONS---------------//
 //**************************************//
+
+function showCharCountValidation(id, input) {
+   $(id).html(input.length);
+
+   if (input.length <= maxCharCardInput) {
+      $(id).removeClass(`text-danger`);
+   } else {
+      $(id).addClass(`text-danger`);
+   }
+
+   toggleDisabled();
+}
+
+function toggleDisabled() {
+   const text = $(`#answer-input`).val();
+
+   if (text.length > 0 && text.length <= maxCharCardInput) {
+      $(`#submit-answer`).removeClass(`disabled`);
+   } else {
+      $(`#submit-answer`).addClass(`disabled`);
+   }
+}
 
 function showError(element, message) {
    $(`${element}-input`).addClass(`is-invalid`);
