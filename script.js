@@ -5,8 +5,8 @@
 $(".form-control").on("input", function () {
    // code below targets the id "overlay-sucess"; for toggleClass,
    // it means "if d-flex is on, turn it off; if d-none is on, turn it off"
-   $(".question").toggleClass("d-none");
-   $(".submit-new-question").toggleClass("d-none");
+   $(".home-page-question").removeClass("d-none");
+   $(".submit-new-question").removeClass("d-none");
 });
 
 $(".answer-a-question").click(function () {
@@ -37,7 +37,6 @@ $("#lets-go-button").click(function (e) {
    }
 
    const emailError = getEmailError(email);
-   console.log(`this is the email error`, emailError);
 
    if (emailError !== ``) {
       showError(`#sign-up-email`, emailError);
@@ -55,12 +54,8 @@ $(`#question-input`).keyup(function (e) {
    console.log(`Event: `, e);
 
    const text = e.target.value;
-   const username = `John`;
-   console.log(`${username} inputted: ${text}`);
 
    const textLength = text.length;
-
-   console.log(`Total inputted chars: ${textLength}`);
 
    $(`#question-input-char-count`).html(textLength);
 
@@ -95,11 +90,7 @@ $(`#ask-a-teacher-submit-button`).click(function () {
 //**************************************//
 
 $(`#answer-input`).keyup(function (e) {
-   console.log(`Event: `, e);
-
    const text = e.target.value;
-   const username = `John`;
-   console.log(`${username} inputted: ${text}`);
 
    const textLength = text.length;
 
@@ -108,18 +99,20 @@ $(`#answer-input`).keyup(function (e) {
    $(`#answer-input-char-count`).html(textLength);
 
    if (textLength > 0 && textLength < 2001) {
-      console.log(`text was entered`);
       $(`#submit-answer`).removeAttr(`disabled`);
       $(`#answer-input-char-count`).removeClass(`text-danger`);
       $(`#answer-input-char-count`).addClass(`text-muted`);
    }
    if (textLength > 2000 || textLength === 0) {
-      console.log(`not enough or too many characters`);
       $(`#submit-answer`).attr(`disabled`, `disabled`);
       $(`#answer-input-char-count`).removeClass(`text-muted`);
       $(`#answer-input-char-count`).addClass(`text-danger`);
    }
 });
+
+//**************************************//
+//--------------FUNCTIONS---------------//
+//**************************************//
 
 function showError(element, message) {
    $(`${element}-input`).addClass(`is-invalid`);
@@ -152,31 +145,4 @@ function padLeft(string) {
       string = 0 + string;
    }
    return string;
-}
-
-function showCharCountValidation(id, input) {
-   $(id).html(input.length);
-
-   if (input.length <= maxCharCardInput) {
-      $(id).removeClass(`text-danger`);
-   } else {
-      $(id).addClass(`text-danger`);
-   }
-
-   toggleDisabled();
-}
-
-function toggleDisabled() {
-   const topText = $(`#edit-input-top-card`).val();
-   const bottomText = $(`#edit-input-bottom-card`).val();
-   if (
-      topText.length > 0 &&
-      topText.length <= maxCharCardInput &&
-      bottomText.length > 0 &&
-      bottomText.length <= maxCharCardInput
-   ) {
-      $(`#save-card`).removeClass(`disabled`);
-   } else {
-      $(`#save-card`).addClass(`disabled`);
-   }
 }
