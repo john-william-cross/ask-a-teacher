@@ -3,14 +3,22 @@
 //**************************************//
 
 $(".form-control").on("input", function () {
-   // code below targets the id "overlay-sucess"; for toggleClass,
-   // it means "if d-flex is on, turn it off; if d-none is on, turn it off"
    $(".home-page-question").removeClass("d-none");
    $(".submit-new-question").removeClass("d-none");
+
+   if ($(`#question-input-home-page`).val() === 0) {
+      console.log(`hey`);
+   }
 });
 
-$(".answer-a-question").click(function () {
-   $(".sign-up-sign-in").toggleClass("d-flex d-none");
+$(`#question-input-home-page`).keyup(function (e) {
+   const text = e.target.value;
+
+   const textLength = text.length;
+   if (textLength === 0) {
+      $(".home-page-question").addClass("d-none");
+      $(".submit-new-question").addClass("d-none");
+   }
 });
 
 //**************************************//
