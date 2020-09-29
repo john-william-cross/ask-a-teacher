@@ -58,51 +58,61 @@ $("#lets-go-button").click(function (e) {
 //----Submit Question Page JavaScript---//
 //**************************************//
 
+//const maxCharCardInput = 500;
+// $(`#answer-input`).keyup(function (e) {
+
 $(`#question-input`).keyup(function (e) {
-   console.log(`Event: `, e);
+   showCharCountValidation(
+      `#question-input-char-count`,
+      $(`#question-input`).val()
+   );
+   // $(`#question-input`).keyup(function (e) {
+   //    console.log(`Event: `, e);
 
-   const text = e.target.value;
+   //    const text = e.target.value;
 
-   const textLength = text.length;
+   //    const textLength = text.length;
 
-   $(`#question-input-char-count`).html(textLength);
+   //    $(`#question-input-char-count`).html(textLength);
 
-   if (textLength > 0 && textLength < 501) {
-      console.log(`text was entered`);
-      $(`#ask-a-teacher-submit-button`).removeAttr(`disabled`);
-      $(`#question-input-char-count`).removeClass(`text-danger`);
-      $(`#question-input-char-count`).addClass(`text-muted`);
-   }
-   if (textLength > 500 || textLength === 0) {
-      console.log(`not enough or too many characters`);
-      $(`#ask-a-teacher-submit-button`).attr(`disabled`, `disabled`);
-      $(`#question-input-char-count`).removeClass(`text-muted`);
-      $(`#question-input-char-count`).addClass(`text-danger`);
-   }
-});
+   //    if (textLength > 0 && textLength < 501) {
+   //       console.log(`text was entered`);
+   //       $(`#ask-a-teacher-submit-button`).removeAttr(`disabled`);
+   //       $(`#question-input-char-count`).removeClass(`text-danger`);
+   //       $(`#question-input-char-count`).addClass(`text-muted`);
+   //    }
+   //    if (textLength > 500 || textLength === 0) {
+   //       console.log(`not enough or too many characters`);
+   //       $(`#ask-a-teacher-submit-button`).attr(`disabled`, `disabled`);
+   //       $(`#question-input-char-count`).removeClass(`text-muted`);
+   //       $(`#question-input-char-count`).addClass(`text-danger`);
+   //    }
+   // });
 
-$(`#ask-a-teacher-submit-button`).click(function () {
-   const emailEntered = $(`#questioner-email-input`).val();
-   console.log(emailEntered);
-   if (emailEntered.length === 0) {
-      $(`#questioner-enter-email-notification`).removeClass(`d-none`);
-      $(`#questioner-email-input`).addClass(`is-invalid`);
-   } else {
-      $(`#questioner-enter-email-notification`).addClass(`d-none`);
-      $(`#questioner-email-input`).removeClass(`is-invalid`);
-   }
+   // $(`#ask-a-teacher-submit-button`).click(function () {
+   //    const emailEntered = $(`#questioner-email-input`).val();
+   //    console.log(emailEntered);
+   //    if (emailEntered.length === 0) {
+   //       $(`#questioner-enter-email-notification`).removeClass(`d-none`);
+   //       $(`#questioner-email-input`).addClass(`is-invalid`);
+   //    } else {
+   //       $(`#questioner-enter-email-notification`).addClass(`d-none`);
+   //       $(`#questioner-email-input`).removeClass(`is-invalid`);
+   //    }
 });
 
 //**************************************//
 //-------Question Page JavaScript-------//
 //**************************************//
-const maxCharCardInput = 2000;
+// const maxCharCardInput = 2000;
 // $(`#answer-input`).keyup(function (e) {
 
 $(`#answer-input`).keyup(function (e) {
    showCharCountValidation(
       `#answer-input-char-count`,
-      $(`#answer-input`).val()
+      $(`#answer-input`).val(),
+      `#submit-answer`,
+      2000
    );
 
    // const text = e.target.value;
@@ -129,25 +139,29 @@ $(`#answer-input`).keyup(function (e) {
 //--------------FUNCTIONS---------------//
 //**************************************//
 
-function showCharCountValidation(id, input) {
-   $(id).html(input.length);
+function showCharCountValidation(countId, input, buttonId, maxChars) {
+   $(countId).html(input.length);
+   console.log(`countId is: `, countId);
+   console.log(`input is: `, input);
+   console.log(`button id is: `, buttonId);
+   console.log(`max char input is: `, maxChars);
 
-   if (input.length <= maxCharCardInput) {
-      $(id).removeClass(`text-danger`);
+   if (input.length > 0 && input.length <= maxChars) {
+      $(countId).removeClass(`text-danger`);
    } else {
-      $(id).addClass(`text-danger`);
+      $(countId).addClass(`text-danger`);
    }
 
-   toggleDisabled();
+   toggleDisabled(input, buttonId);
 }
 
-function toggleDisabled() {
-   const text = $(`#answer-input`).val();
+function toggleDisabled(input, buttonId) {
+   const text = $(input).val();
 
-   if (text.length > 0 && text.length <= maxCharCardInput) {
-      $(`#submit-answer`).removeAttr(`disabled`);
+   if (text.length > 0 && text.length <= maxChars) {
+      $(buttonId).removeAttr(`disabled`);
    } else {
-      $(`#submit-answer`).attr(`disabled`, `disabled`);
+      $(buttonId).attr(`disabled`, `disabled`);
    }
 }
 
