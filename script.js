@@ -145,9 +145,9 @@ function toggleDisabled() {
    const text = $(`#answer-input`).val();
 
    if (text.length > 0 && text.length <= maxCharCardInput) {
-      $(`#submit-answer`).removeClass(`disabled`);
+      $(`#submit-answer`).removeAttr(`disabled`);
    } else {
-      $(`#submit-answer`).addClass(`disabled`);
+      $(`#submit-answer`).attr(`disabled`, `disabled`);
    }
 }
 
