@@ -152,13 +152,11 @@ function showCharCountValidation(countId, input, buttonId, maxChars) {
       $(countId).addClass(`text-danger`);
    }
 
-   toggleDisabled(input, buttonId);
+   toggleDisabled(input, buttonId, maxChars);
 }
 
-function toggleDisabled(input, buttonId) {
-   const text = $(input).val();
-
-   if (text.length > 0 && text.length <= maxChars) {
+function toggleDisabled(input, buttonId, maxChars) {
+   if (input.length > 0 && input.length <= maxChars) {
       $(buttonId).removeAttr(`disabled`);
    } else {
       $(buttonId).attr(`disabled`, `disabled`);
