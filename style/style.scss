@@ -42,16 +42,12 @@ a {
    @include media-breakpoint-only(xs) {
    }
    @include media-breakpoint-only(sm) {
-      // margin-top: 68px;
    }
    @include media-breakpoint-only(md) {
-      // margin-top: 35px;
    }
    @include media-breakpoint-only(lg) {
-      // margin-top: 42px;
    }
    @include media-breakpoint-only(xl) {
-      // margin-top: 54px;
    }
 }
 
@@ -99,12 +95,6 @@ hr {
    background-color: $gray-100;
 }
 
-// input[type="text"] {
-//    @include media-breakpoint-only(xs) {
-//       font-size: 24px;
-//    }
-// }
-
 .header-solid {
    background-color: $gray-900;
 
@@ -114,15 +104,6 @@ hr {
    }
 }
 
-// #xs-header-alignment {
-//    padding-left: 37px;
-// }
-
 a:hover {
    cursor: pointer;
 }
-
-// #answer-input-char-counter {
-//    color: $danger;
-//    cursor: not-allowed;
-// }
