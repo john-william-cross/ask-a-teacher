@@ -58,47 +58,32 @@ $("#lets-go-button").click(function (e) {
 //----Submit Question Page JavaScript---//
 //**************************************//
 
-//const maxCharCardInput = 500;
-// $(`#answer-input`).keyup(function (e) {
-
 $(`#question-input`).keyup(function (e) {
    showCharCountValidation(
       `#question-input-char-count`,
-      $(`#question-input`).val()
+      $(`#question-input`).val(),
+      `#ask-a-teacher-submit-button`,
+      500
    );
-   // $(`#question-input`).keyup(function (e) {
-   //    console.log(`Event: `, e);
+});
 
-   //    const text = e.target.value;
+$("#ask-a-teacher-submit-button").click(function (e) {
+   const emailInput = $(`#questioner-email-input`).val();
+   const email = emailInput.trim().toLowerCase();
+   const emailError = getEmailError(email);
+   if (emailError !== ``) {
+      showError(`#questioner-email`, emailError);
+   } else {
+      hideError(`#questioner-email-error`, emailError);
+   }
 
-   //    const textLength = text.length;
-
-   //    $(`#question-input-char-count`).html(textLength);
-
-   //    if (textLength > 0 && textLength < 501) {
-   //       console.log(`text was entered`);
-   //       $(`#ask-a-teacher-submit-button`).removeAttr(`disabled`);
-   //       $(`#question-input-char-count`).removeClass(`text-danger`);
-   //       $(`#question-input-char-count`).addClass(`text-muted`);
-   //    }
-   //    if (textLength > 500 || textLength === 0) {
-   //       console.log(`not enough or too many characters`);
-   //       $(`#ask-a-teacher-submit-button`).attr(`disabled`, `disabled`);
-   //       $(`#question-input-char-count`).removeClass(`text-muted`);
-   //       $(`#question-input-char-count`).addClass(`text-danger`);
-   //    }
-   // });
-
-   // $(`#ask-a-teacher-submit-button`).click(function () {
-   //    const emailEntered = $(`#questioner-email-input`).val();
-   //    console.log(emailEntered);
-   //    if (emailEntered.length === 0) {
-   //       $(`#questioner-enter-email-notification`).removeClass(`d-none`);
-   //       $(`#questioner-email-input`).addClass(`is-invalid`);
-   //    } else {
-   //       $(`#questioner-enter-email-notification`).addClass(`d-none`);
-   //       $(`#questioner-email-input`).removeClass(`is-invalid`);
-   //    }
+   // if (emailEntered.length === 0) {
+   //    $(`#questioner-enter-email-notification`).removeClass(`d-none`);
+   //    $(`#questioner-email-input`).addClass(`is-invalid`);
+   // } else {
+   //    $(`#questioner-enter-email-notification`).addClass(`d-none`);
+   //    $(`#questioner-email-input`).removeClass(`is-invalid`);
+   // }
 });
 
 //**************************************//
@@ -114,25 +99,6 @@ $(`#answer-input`).keyup(function (e) {
       `#submit-answer`,
       2000
    );
-
-   // const text = e.target.value;
-
-   // const textLength = text.length;
-
-   // console.log(`Total inputted chars: ${textLength}`);
-
-   // $(`#answer-input-char-count`).html(textLength);
-
-   // if (textLength > 0 && textLength < 2001) {
-   //    $(`#submit-answer`).removeAttr(`disabled`);
-   //    $(`#answer-input-char-count`).removeClass(`text-danger`);
-   //    $(`#answer-input-char-count`).addClass(`text-muted`);
-   // }
-   // if (textLength > 2000 || textLength === 0) {
-   //    $(`#submit-answer`).attr(`disabled`, `disabled`);
-   //    $(`#answer-input-char-count`).removeClass(`text-muted`);
-   //    $(`#answer-input-char-count`).addClass(`text-danger`);
-   // }
 });
 
 //**************************************//
@@ -141,17 +107,11 @@ $(`#answer-input`).keyup(function (e) {
 
 function showCharCountValidation(countId, input, buttonId, maxChars) {
    $(countId).html(input.length);
-   console.log(`countId is: `, countId);
-   console.log(`input is: `, input);
-   console.log(`button id is: `, buttonId);
-   console.log(`max char input is: `, maxChars);
-
    if (input.length > 0 && input.length <= maxChars) {
       $(countId).removeClass(`text-danger`);
    } else {
       $(countId).addClass(`text-danger`);
    }
-
    toggleDisabled(input, buttonId, maxChars);
 }
 
