@@ -36,7 +36,7 @@ $("#lets-go-button").click(function (e) {
    const email = emailInput.trim().toLowerCase();
    const password = $(`#sign-up-password-input`).val();
 
-   const passwordError = getPasswordError(password, email); // getPasswordError should return a string
+   const passwordError = getPasswordError(password, email);
 
    if (passwordError !== ``) {
       showError(`#sign-up-password`, passwordError);
@@ -74,23 +74,13 @@ $("#ask-a-teacher-submit-button").click(function (e) {
    if (emailError !== ``) {
       showError(`#questioner-email`, emailError);
    } else {
-      hideError(`#questioner-email-error`, emailError);
+      hideError(`#questioner-email`, emailError);
    }
-
-   // if (emailEntered.length === 0) {
-   //    $(`#questioner-enter-email-notification`).removeClass(`d-none`);
-   //    $(`#questioner-email-input`).addClass(`is-invalid`);
-   // } else {
-   //    $(`#questioner-enter-email-notification`).addClass(`d-none`);
-   //    $(`#questioner-email-input`).removeClass(`is-invalid`);
-   // }
 });
 
 //**************************************//
 //-------Question Page JavaScript-------//
 //**************************************//
-// const maxCharCardInput = 2000;
-// $(`#answer-input`).keyup(function (e) {
 
 $(`#answer-input`).keyup(function (e) {
    showCharCountValidation(
