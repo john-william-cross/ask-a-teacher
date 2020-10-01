@@ -59,6 +59,15 @@ $("#lets-go-button").click(function (e) {
    // } else {
    //    console.log(`Here is the userProps array: `, userProps);
    // }
+
+   const user = {
+      email: email,
+      password: password,
+      createdAt: getCreatedAt(),
+      id: createId(),
+   };
+
+   console.log(`Here is the user object: `, user);
 });
 
 //**************************************//
