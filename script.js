@@ -52,6 +52,13 @@ $("#lets-go-button").click(function (e) {
       hideError(`#sign-up-email`, emailError);
    }
    console.log(`The date is:`, getCreatedAt());
+
+   // const userProps = [email, password, Number(getCreatedAt()), createId()];
+   // if (passwordError !== `` || emailError !== ``) {
+   //    console.log(`Array will not be displayed`);
+   // } else {
+   //    console.log(`Here is the userProps array: `, userProps);
+   // }
 });
 
 //**************************************//
@@ -144,4 +151,33 @@ function padLeft(string) {
       string = 0 + string;
    }
    return string;
+}
+
+function createId() {
+   function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max + 1 - min) + min); //gives entire range plus minimum
+   }
+
+   const randomInt = getRandomInt(0, 999);
+   // console.log(`Random int between 0 and 999 is: ${randomInt}`);
+   let timeClicked = new Date(Date.now());
+   const milliseconds = String(timeClicked.getMilliseconds());
+   // console.log(`Let's go was clicked at: ${milliseconds}`);
+   const nonPaddedId = randomInt.toString() + milliseconds;
+   // console.log(
+   // `the id created by combining random int and time clicked is: ${nonPaddedId}`
+   // );
+   const timeClickedMilliseconds = String(milliseconds);
+
+   const randomIntAsString = String(randomInt);
+   //console.log(`here's the random int as a string: `, randomIntAsString);
+   const paddedRandomInt = randomIntAsString.padStart(3, `0`);
+   //console.log(`here's the padded random int:`, paddedRandomInt);
+
+   const millisecondsAsString = String(timeClickedMilliseconds);
+   //console.log(`here's the time clicked: `, millisecondsAsString);
+   const paddedTimeClicked = millisecondsAsString.padStart(3, `0`);
+   //console.log(`here's the padded time clicked: `, paddedTimeClicked);
+   const id = String(paddedRandomInt + paddedTimeClicked);
+   return id;
 }
