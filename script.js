@@ -68,6 +68,43 @@ $("#lets-go-button").click(function (e) {
    };
 
    console.log(`Here is the user object: `, user);
+
+   const copyOfUser = { ...user };
+
+   copyOfUser.emailTld = getTld(email);
+
+   copyOfUser.socialProfiles = [
+      {
+         site: "facebook",
+         siteId: "530c2716-36e2-4a80-93b7-0e8483d629e1",
+         username: "",
+         image: {
+            sm: "",
+            orig: "",
+         },
+      },
+      {
+         site: "twitter",
+         siteId: "79023b4d-57a2-406b-8efe-bda47fb1696c",
+         username: "",
+         image: {
+            sm: "",
+            md: "",
+            orig: "",
+         },
+      },
+   ];
+
+   console.log(
+      `Here is the copy of the user object including the email TLD and social profiles property: `,
+      copyOfUser
+   );
+   function getTld(email) {
+      const emailTld = email.slice(email.lastIndexOf(`.`) + 1);
+      // emailTldNoDot = emailTld.slice(1); //could use this if didn't + 1 above
+      console.log(`the email tld is: `, emailTld);
+      return emailTld;
+   }
 });
 
 //**************************************//
