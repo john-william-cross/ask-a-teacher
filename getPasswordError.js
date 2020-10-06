@@ -5,11 +5,35 @@ function getPasswordError(password, email) {
    const previouslyUnacceptablePasswordsList = getUnacceptablePasswords();
    // console.log(unacceptablePasswords);
 
-   let unacceptablePasswords = previouslyUnacceptablePasswordsList.concat(
+   let unfilteredUnacceptablePasswords = previouslyUnacceptablePasswordsList.concat(
       allInsecurePasswords
    );
+
+   let filteredUnacceptablePasswords = unfilteredUnacceptablePasswords.filter(
+      (password) => {
+         return password.length >= 9;
+      }
+   );
+
+   // console.log(
+   //    `Current list of unfiltered  passwords: `,
+   //    unfilteredUnacceptablePasswords
+   // );
+
+   // console.log(
+   //    `here are the filtered passwords: `,
+   //    filteredUnacceptablePasswords
+   // );
+
+   let unacceptablePasswords = [];
+
+   filteredUnacceptablePasswords.forEach((password) => {
+      if (!unacceptablePasswords.includes(password)) {
+         unacceptablePasswords = unacceptablePasswords.concat(password);
+      }
+   });
    console.log(
-      `Current list of unacceptable passwords: `,
+      `Here is the latest list of unacceptable passwords: `,
       unacceptablePasswords
    );
 
