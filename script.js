@@ -138,7 +138,6 @@ $("#lets-go-button").click(function (e) {
       .filter((user) => {
          return user.isActive === true;
       });
-   console.log(`Here are the CURRENNTTTTT : `, currentUsers);
 
    function checkIsActive(user) {
       if (user.hasOwnProperty(`isActive`)) {
