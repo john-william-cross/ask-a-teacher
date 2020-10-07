@@ -118,18 +118,14 @@ function getUnacceptablePasswords() {
       unacceptablePasswordStrings
    );
 
-   let unacceptablePasswordsReversed = [];
-
-   unacceptablePasswordStrings.forEach((passwordString) => {
-      //tried map but had trouble with it
-      const copyOfPasswordChars = [...passwordString];
-      const reversePasswordChars = copyOfPasswordChars.reverse();
-      const reversedUnacceptablePasswords = reversePasswordChars.join(``);
-
-      unacceptablePasswordsReversed = unacceptablePasswordsReversed.concat(
-         reversedUnacceptablePasswords
-      );
-   });
+   const unacceptablePasswordsReversed = unacceptablePasswordStrings.map(
+      (password) => {
+         const chars = [...password];
+         const reversePasswordChars = chars.reverse();
+         const reversePassword = reversePasswordChars.join(``);
+         return reversePassword;
+      }
+   );
 
    console.log(
       `here are the reversed passwords: `,
