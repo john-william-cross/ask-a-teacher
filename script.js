@@ -125,6 +125,31 @@ $("#lets-go-button").click(function (e) {
    //    user
    // );
 
+   const currentUsers = users
+      .map((user) => {
+         return {
+            id: user.id,
+            email: user.email,
+            password: user.password,
+            createdAt: user.createdAt,
+            isActive: checkIsActive(user),
+         };
+      })
+      .filter((user) => {
+         return user.isActive === true;
+      });
+   console.log(`Here are the CURRENNTTTTT : `, currentUsers);
+
+   function checkIsActive(user) {
+      if (user.hasOwnProperty(`isActive`)) {
+         return user.isActive;
+      } else {
+         return false;
+      }
+   }
+   const currentUser = currentUsers[0];
+   console.log(`here's the current active user: `, currentUser);
+
    function getTld(email) {
       const emailTld = email.slice(email.lastIndexOf(`.`) + 1);
       // emailTldNoDot = emailTld.slice(1); //could use this if didn't + 1 above

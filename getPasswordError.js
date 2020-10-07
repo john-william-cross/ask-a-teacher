@@ -37,6 +37,22 @@ function getPasswordError(password, email) {
       unacceptablePasswords
    );
 
+   const hasAcceptableLength = unacceptablePasswords.every((password) => {
+      return password.length >= 9;
+   });
+   console.log(
+      `Each password in unacceptablePasswords is >= 9 evaluates to: `,
+      hasAcceptableLength
+   );
+
+   const hasQwerty = unacceptablePasswords.some((password) => {
+      return password.includes(`qwerty`);
+   });
+   console.log(
+      `At least one password in unacceptablePasswords includes the string "qwerty" evaluates to: `,
+      hasQwerty
+   );
+
    const lowerCasedPassword = password.toLowerCase();
    if (lowerCasedPassword.length === 0) {
       return `Please create a password.`;
