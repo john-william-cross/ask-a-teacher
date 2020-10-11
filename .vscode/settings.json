@@ -8,6 +8,7 @@
              "cmd": "sass style/master.scss style/dist.css"
           }
        ]
-    }
+   },
+   "liveServer.settings.port": 5502
  }
  
