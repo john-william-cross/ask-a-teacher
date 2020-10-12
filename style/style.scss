@@ -38,7 +38,7 @@ a {
 
 .answer-question-link {
    line-height: 1;
-   margin-bottom: 5px;
+   margin-bottom: 2px;
    @include media-breakpoint-only(xs) {
    }
    @include media-breakpoint-only(sm) {
@@ -59,6 +59,7 @@ a {
 .answer-question-link {
    color: $white;
    font-weight: normal;
+   font-size: 16px;
 }
 
 .thank-you-message {
