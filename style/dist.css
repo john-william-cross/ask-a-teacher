@@ -11533,7 +11533,7 @@ a {
 
 @media (max-width: 575.98px) {
   .logo-text-size {
-    font-size: 2.625rem;
+    font-size: 1.5rem;
     line-height: 1;
   }
 }
@@ -11562,6 +11562,19 @@ a {
 .answer-question-link {
   line-height: 1;
 }
+@media (max-width: 575.98px) {
+  .answer-question-link {
+    font-size: 12px;
+    margin-bottom: 5px;
+    margin-right: 15px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .answer-question-link {
+    font-size: 16px;
+    margin-top: 18px;
+  }
+}
 .submit-new-question,
 .sign-up-prompt {
   font-weight: 700;
@@ -11570,7 +11583,6 @@ a {
 .answer-question-link {
   color: #fff;
   font-weight: normal;
-  font-size: 16px;
 }
 
 .thank-you-message {
@@ -11579,8 +11591,9 @@ a {
 
 @media (max-width: 575.98px) {
   .logo {
-    width: 30px;
-    margin-top: -20px;
+    width: 20px;
+    margin-top: -15px;
+    margin-right: -5px;
   }
 }
 @media (min-width: 576px) and (max-width: 767.98px) {
