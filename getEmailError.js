@@ -6,7 +6,7 @@ function getEmailError(email) {
    if (email === ``) {
       return `Please enter your email address.`;
    } else if (isValidEmail === false) {
-      return `Please enter a valid CCSD email address.`;
+      return `Please enter a valid email address.`;
    } else {
       return ``;
    }

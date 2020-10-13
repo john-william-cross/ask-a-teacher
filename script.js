@@ -24,7 +24,27 @@ $(`#question-input-home-page`).keyup(function (e) {
 //**************************************//
 //----Sign-in-Sign-Up Page JavaScript---//
 //**************************************//
+$("#return-user-sign-in-button").click(function () {
+   const emailInput = $(`#return-user-email-input`).val();
+   const email = emailInput.trim().toLowerCase();
+   const password = $(`#return-user-password-input`).val();
+   // console.log(`password was: `, password);
+   const passwordError = getPasswordError(password, email);
 
+   if (passwordError !== ``) {
+      showError(`#return-user-password`, passwordError);
+   } else {
+      hideError(`#return-user-password`, passwordError);
+   }
+
+   const emailError = getEmailError(email);
+
+   if (emailError !== ``) {
+      showError(`#return-user-email`, emailError);
+   } else {
+      hideError(`#return-user-email`, emailError);
+   }
+});
 $(".sign-up-prompt").click(function () {
    $(".return-user-sign-in").addClass("d-none");
    $(".show-sign-up-info").toggleClass("d-none");
