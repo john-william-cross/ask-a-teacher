@@ -19,7 +19,7 @@ a {
 .logo-text-size {
    @include media-breakpoint-only(xs) {
       font-size: $font-size-base;
-      line-height: 1;
+      line-height: 0;
    }
    @include media-breakpoint-only(sm) {
       font-size: $font-size-base * 1.75;
