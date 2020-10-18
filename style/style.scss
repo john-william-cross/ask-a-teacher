@@ -52,8 +52,10 @@ a {
       margin-bottom: 7px;
    }
    @include media-breakpoint-only(lg) {
+      margin-bottom: 8px;
    }
    @include media-breakpoint-only(xl) {
+      margin-bottom: 10px;
    }
 }
 

@@ -11580,6 +11580,17 @@ a {
     margin-bottom: 7px;
   }
 }
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .answer-question-link {
+    margin-bottom: 8px;
+  }
+}
+@media (min-width: 1200px) {
+  .answer-question-link {
+    margin-bottom: 10px;
+  }
+}
+
 .submit-new-question,
 .sign-up-prompt {
   font-weight: 700;

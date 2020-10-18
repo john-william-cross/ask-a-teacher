@@ -37,7 +37,7 @@ $("#return-user-sign-in-button").click(function () {
       hideError(`#return-user-password`, passwordError);
    }
 
-   const emailError = getEmailError(email);
+   const emailError = getTeacherEmailError(email);
 
    if (emailError !== ``) {
       showError(`#return-user-email`, emailError);
@@ -64,7 +64,7 @@ $("#lets-go-button").click(function (e) {
       hideError(`#sign-up-password`, passwordError);
    }
 
-   const emailError = getEmailError(email);
+   const emailError = getTeacherEmailError(email);
 
    if (emailError !== ``) {
       showError(`#sign-up-email`, emailError);
@@ -193,7 +193,7 @@ $(`#question-input`).keyup(function (e) {
 $("#ask-a-teacher-submit-button").click(function (e) {
    const emailInput = $(`#questioner-email-input`).val();
    const email = emailInput.trim().toLowerCase();
-   const emailError = getEmailError(email);
+   const emailError = getUserEmailError(email);
    if (emailError !== ``) {
       showError(`#questioner-email`, emailError);
    } else {
