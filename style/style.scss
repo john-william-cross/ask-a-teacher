@@ -40,7 +40,7 @@ a {
    line-height: 1;
    // margin-bottom: 2px;
    @include media-breakpoint-only(xs) {
-      font-size: 10px;
+      font-size: 12px;
       margin-bottom: 5px;
    }
    @include media-breakpoint-only(sm) {
